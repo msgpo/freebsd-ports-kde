@@ -1,0 +1,13 @@
+Python 2.x does not accept the 'end' argument in print()
+
+--- pygobject/meson.build.orig	2018-09-17 21:12:51 UTC
++++ pygobject/meson.build
+@@ -3,7 +3,7 @@ python_exec = find_program(['python3', 'python'])
+ 
+ py_override_cmd = run_command(
+     python_exec,
+-    ['-c', 'import gi;print (gi._overridesdir, end="")'],
++    ['-c', 'import gi,sys;sys.stdout.write(gi._overridesdir)'],
+ )
+ 
+ if py_override_cmd.returncode() != 0

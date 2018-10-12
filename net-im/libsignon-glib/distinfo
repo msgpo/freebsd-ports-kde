@@ -1,3 +1,5 @@
-TIMESTAMP = 1521876594
-SHA256 (KDE/accounts-sso/accounts-sso-libsignon-glib-4e85baaf483268d04bbf835bebeac4ae30c7c327_GL0.tar.gz) = fea04d2cb4e59b9322226ba532e1600c23f817ee409d3c6ec0b7659aec1840a7
-SIZE (KDE/accounts-sso/accounts-sso-libsignon-glib-4e85baaf483268d04bbf835bebeac4ae30c7c327_GL0.tar.gz) = 54781
+TIMESTAMP = 1539337836
+SHA256 (KDE/accounts-sso/accounts-sso-libsignon-glib-80e08a8045d2e91f0c460c94d0356d471b0f8178_GL0.tar.gz) = b9752c80ed478d3fe493b0b4025bfedb86d6359877ff6e0153e4136175481520
+SIZE (KDE/accounts-sso/accounts-sso-libsignon-glib-80e08a8045d2e91f0c460c94d0356d471b0f8178_GL0.tar.gz) = 52374
+SHA256 (KDE/accounts-sso/accounts-sso-signon-dbus-specification-67487954653006ebd0743188342df65342dc8f9b_GL0.tar.gz) = 55871ec71c934b612cc40f6ef7565a44bd38679c56b6f4b85de7a67008955c12
+SIZE (KDE/accounts-sso/accounts-sso-signon-dbus-specification-67487954653006ebd0743188342df65342dc8f9b_GL0.tar.gz) = 3191
