@@ -1,5 +1,6 @@
 # $FreeBSD$
 
+PORTREVISION=	2
 PKGNAMESUFFIX?=  -qt5
 
 COMMENT=	Portable Delphi-like IDE for the FreePascal compiler (QT5)
@@ -13,4 +14,3 @@ LCL_PLATFORM=	qt5
 MASTERDIR=	${.CURDIR}/../../editors/lazarus
 
 .include "${MASTERDIR}/Makefile"
-

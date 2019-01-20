@@ -29,7 +29,6 @@
     SUBDIR += bwm-ng
     SUBDIR += cacti
     SUBDIR += cacti-spine
-    SUBDIR += cacti88
     SUBDIR += cacti88-spine
     SUBDIR += carbon-relay-ng
     SUBDIR += carbonzipper
@@ -83,7 +82,6 @@
     SUBDIR += gsnmp
     SUBDIR += guifi-snpservices
     SUBDIR += hastmon
-    SUBDIR += hawk
     SUBDIR += icinga
     SUBDIR += icinga-classicweb
     SUBDIR += icinga-core
@@ -109,7 +107,6 @@
     SUBDIR += ipaudit
     SUBDIR += ipcad
     SUBDIR += ipcalc
-    SUBDIR += ipplan
     SUBDIR += iprange
     SUBDIR += ipv6calc
     SUBDIR += ipv6gen
@@ -129,6 +126,7 @@
     SUBDIR += mbrowse
     SUBDIR += mdata-client
     SUBDIR += metronome
+    SUBDIR += midpoint
     SUBDIR += mk-livestatus
     SUBDIR += monitoring-plugins
     SUBDIR += mrtg
@@ -175,7 +173,6 @@
     SUBDIR += nbtscan
     SUBDIR += ndoutils
     SUBDIR += ndpmon
-    SUBDIR += nedi
     SUBDIR += nefu
     SUBDIR += net-snmp
     SUBDIR += netbox
@@ -229,12 +226,11 @@
     SUBDIR += p5-Cisco-Reconfig
     SUBDIR += p5-Data-Validate-IP
     SUBDIR += p5-FusionInventory-Agent
-    SUBDIR += p5-FusionInventory-Agent-Task-NetDiscovery
-    SUBDIR += p5-FusionInventory-Agent-Task-SNMPQuery
     SUBDIR += p5-GRNOC-Config
     SUBDIR += p5-GRNOC-TL1
     SUBDIR += p5-MRTG-Parse
     SUBDIR += p5-Mon
+    SUBDIR += p5-Monitoring-Livestatus
     SUBDIR += p5-Monitoring-Plugin
     SUBDIR += p5-NSNMP
     SUBDIR += p5-Nagios-Object
@@ -289,12 +285,9 @@
     SUBDIR += pdagent-integrations
     SUBDIR += percona-monitoring-plugins
     SUBDIR += pftabled
-    SUBDIR += php56-snmp
-    SUBDIR += php70-snmp
     SUBDIR += php71-snmp
     SUBDIR += php72-snmp
     SUBDIR += php73-snmp
-    SUBDIR += phpip
     SUBDIR += phpipam
     SUBDIR += phpweathermap
     SUBDIR += pixilate
@@ -389,7 +382,6 @@
     SUBDIR += unifi-lts
     SUBDIR += unifi5
     SUBDIR += victorops-nagios
-    SUBDIR += vidalia
     SUBDIR += virt-viewer
     SUBDIR += wdiag
     SUBDIR += weplab

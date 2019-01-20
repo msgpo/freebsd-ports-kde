@@ -1,7 +1,8 @@
 # $FreeBSD$
 
 PORTNAME=	nokogiri
-PORTVERSION=	1.8.4
+PORTVERSION=	1.8.5
+PORTREVISION=	1
 CATEGORIES=	textproc rubygems
 MASTER_SITES=	RG
 
@@ -12,10 +13,12 @@ LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.md
 
 BUILD_DEPENDS=	${RUN_DEPENDS}
+LIB_DEPENDS=	libgcrypt.so:security/libgcrypt \
+		libgpg-error.so:security/libgpg-error \
+		libunwind.so:devel/libunwind
 RUN_DEPENDS=	rubygem-pkg-config>=1.1.7:devel/rubygem-pkg-config
-LIB_DEPENDS=	libgcrypt.so:security/libgcrypt
 
-USES=		gem gnome pkgconfig
+USES=		gem gnome pkgconfig gettext-runtime
 USE_GNOME=	libxml2 libxslt
 USE_RUBY=	yes
 

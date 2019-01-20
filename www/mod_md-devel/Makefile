@@ -2,11 +2,14 @@
 # $FreeBSD$
 
 PORTNAME=	mod_md
-PORTVERSION=	1.1.16
+PORTVERSION=	1.1.17
 DISTVERSIONPREFIX=	v
 CATEGORIES=	www
 PKGNAMEPREFIX=	${APACHE_PKGNAMEPREFIX}
 PKGNAMESUFFIX=	-devel
+
+DEPRECATED=	Use the module that is shipped with Apache 2.4
+EXPIRATION_DATE=2019-03-24
 
 MAINTAINER=	brnrd@FreeBSD.org
 COMMENT=	Early experience LetsEncrypt module for Apache httpd
@@ -16,7 +19,6 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BROKEN_mips=		fails to compile: md_json.c:29: expected [error|warning|ignored] after pragma GCC diagnostic
 BROKEN_mips64=		fails to compile: md_json.c:29: expected [error|warning|ignored] after pragma GCC diagnostic
-BROKEN_powerpc64=	fails to compile: md_json.c:29: expected [error|warning|ignored] after pragma GCC diagnostic
 
 LIB_DEPENDS=	libaprutil-1.so:devel/apr1 \
 		libcurl.so:ftp/curl \
@@ -41,12 +43,6 @@ PORTDOCS=	README README.md
 
 OPTIONS_DEFINE=	DOCS
 
-.include <bsd.port.pre.mk>
-
-.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1100085 && ${SSL_DEFAULT} == base
-IGNORE=		port requires OpenSSL 1.0.2 or later, set DEFAULT_VERSIONS+= ssl=openssl
-.endif
-
 post-install:
 	${RM} ${STAGEDIR}${PREFIX}/share/doc/mod_md/LICENSE
 	${MKDIR} ${STAGEDIR}${PREFIX}/${APACHEETCDIR}/modules.d
@@ -58,4 +54,4 @@ post-install:
 	(cd ${STAGEDIR}${PREFIX}/${APACHEMODDIR} && \
 		${LN} mod_manageddomain.so.0.0.0 mod_manageddomain.so)
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>

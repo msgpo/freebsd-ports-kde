@@ -28,6 +28,7 @@
     SUBDIR += himenobench
     SUBDIR += hpl
     SUBDIR += hs-criterion
+    SUBDIR += hs-criterion-measurement
     SUBDIR += httperf
     SUBDIR += imb
     SUBDIR += interbench
@@ -36,6 +37,7 @@
     SUBDIR += iozone21
     SUBDIR += iperf
     SUBDIR += iperf3
+    SUBDIR += libcelero
     SUBDIR += libmicro
     SUBDIR += linux-vdbench
     SUBDIR += lmbench

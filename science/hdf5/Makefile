@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	hdf5
-PORTVERSION=	1.10.2
+PORTVERSION=	1.10.4
 CATEGORIES=	science archivers graphics
 MASTER_SITES=	https://support.hdfgroup.org/ftp/HDF5/releases/hdf5-${PORTVERSION:R}/${DISTNAME}/src/ \
 		LOCAL/sunpoet
@@ -19,6 +19,8 @@ OPTIONS_DEFINE=	DEBUG EXAMPLES FORTRAN SZIP
 OPTIONS_DEFAULT=SZIP
 OPTIONS_SUB=	yes
 
+USES=		compiler:c11 libtool localbase tar:bzip2
+
 CONFIGURE_ARGS=	--enable-cxx \
 		--enable-hl \
 		--enable-instrument \
@@ -28,7 +30,6 @@ INSTALL_TARGET=	install-strip
 MAKE_JOBS_UNSAFE=	yes
 TEST_TARGET=	check
 USE_LDCONFIG=	yes
-USES=		libtool localbase tar:bzip2
 
 PORTEXAMPLES=	*
 

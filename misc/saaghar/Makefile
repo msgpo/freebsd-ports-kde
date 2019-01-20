@@ -2,7 +2,7 @@
 
 PORTNAME=	saaghar
 PORTVERSION=	2.5.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	misc
 MASTER_SITES=	SF/saaghar/Source%20Code/:saaghar \
 		SF/ganjoor/s3db:ganjoor
@@ -14,6 +14,11 @@ MAINTAINER=	javad.kouhi@gmail.com
 COMMENT=	Persian poetry software
 
 LICENSE=	GPLv3
+
+BROKEN=		fails to build
+
+DEPRECATED=		Qt4 has been EOL since december 2015
+EXPIRATION_DATE=	2019-03-15
 
 EXTRACT_DEPENDS=	${LOCALBASE}/bin/unzip:archivers/unzip
 

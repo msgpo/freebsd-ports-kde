@@ -2,7 +2,7 @@
 
 PORTNAME=	deal.II
 DISTVERSIONPREFIX=	v
-DISTVERSION=	9.0.0
+DISTVERSION=	9.0.1
 PORTREVISION=	3
 CATEGORIES=	math
 
@@ -13,11 +13,12 @@ LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	${LOCALBASE}/include/boost/config.hpp:devel/boost-libs
-LIB_DEPENDS=	libhdf5.so:science/hdf5 \
+LIB_DEPENDS=	libgoto2.so:math/gotoblas \
+		libhdf5.so:science/hdf5 \
 		libmetis.so:math/metis \
 		libtbb.so:devel/tbb
 
-USES=		cmake:outsource compiler:c++17-lang localbase:ldflags
+USES=		cmake compiler:c++17-lang localbase:ldflags
 USE_GITHUB=	yes
 GH_ACCOUNT=	${PORTNAME:tl:S/.//}
 GH_PROJECT=	${PORTNAME:tl:S/.//}

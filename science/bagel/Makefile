@@ -2,8 +2,7 @@
 
 PORTNAME=	bagel
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.1.2-21
-DISTVERSIONSUFFIX=	-g2a9472a50
+DISTVERSION=	1.2.2
 CATEGORIES=	science
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -13,7 +12,6 @@ LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 BROKEN_i386=	error: static_assert failed "size_t is assumed to be the same size as unsigned long long"
-BROKEN_FreeBSD_10=	/usr/include/c++/v1/memory:4004:35: error: no viable overloaded '='; __e->__weak_this_ = *this;
 
 LIB_DEPENDS=	libboost_serialization.so:devel/boost-libs \
 		libcblas.so:math/cblas
@@ -38,9 +36,9 @@ LIBXC_CONFIGURE_WITH=		libxc
 LIBXC_LIB_DEPENDS=		libxc.so:science/libxc
 
 SCALAPACK_DESC=			Use ScaLapack library for parallelized linear algebra
-SCALAPACK_CONFIGURE_ENABLE=	libxc
-SCALAPACK_MAKE_ARGS=		EXTRA_LIBS="-lcblas"
-SCALAPACK_MAKE_ARGS_OFF=	EXTRA_LIBS="-lcblas -llapack -lblas" # -llapack -lblas are a replacement of libscalapack
+SCALAPACK_CONFIGURE_ENABLE=	scalapack
+SCALAPACK_VARS=			LDFLAGS+="-lcblas -lscalapack"
+SCALAPACK_VARS_OFF=		LDFLAGS+="-lcblas -llapack -lblas" # -llapack -lblas are a replacement of libscalapack
 SCALAPACK_LIB_DEPENDS=		libscalapack.so:math/scalapack
 SCALAPACK_LIB_DEPENDS_OFF=	liblapack.so:math/lapack \
 				libblas.so:math/blas
@@ -49,5 +47,9 @@ SCALAPACK_IMPLIES=		MPI
 SMITH_DESC=			Compile SMITH generated code
 SMITH_CONFIGURE_ENABLE=		smith
 SMITH_IMPLIES=			MPI
+
+TEST_TARGET=			check # tests fail to build: https://github.com/nubakery/bagel/issues/145
+#TEST_ENV=			${MAKE_ARGS}
+#TEST_ARGS=			${MAKE_ARGS}
 
 .include <bsd.port.mk>
