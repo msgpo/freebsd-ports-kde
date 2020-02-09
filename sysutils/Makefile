@@ -94,6 +94,9 @@
     SUBDIR += bareos17-client
     SUBDIR += bareos17-client-static
     SUBDIR += bareos17-server
+    SUBDIR += bareos18-client
+    SUBDIR += bareos18-server
+    SUBDIR += bareos18-traymonitor
     SUBDIR += barrier
     SUBDIR += bastille
     SUBDIR += batmon
@@ -320,7 +323,6 @@
     SUBDIR += fcron
     SUBDIR += fd
     SUBDIR += fdupes
-    SUBDIR += feather
     SUBDIR += fetchlog
     SUBDIR += ffs2recov
     SUBDIR += file
@@ -590,6 +592,7 @@
     SUBDIR += lineak-xosdplugin
     SUBDIR += lineakd
     SUBDIR += linrename
+    SUBDIR += linux-c7-dosfstools
     SUBDIR += linux-c7-lttng-ust
     SUBDIR += linux-c7-numactl-libs
     SUBDIR += linux-c7-userspace-rcu
@@ -763,6 +766,7 @@
     SUBDIR += opencorsairlink
     SUBDIR += openipmi
     SUBDIR += opensbi
+    SUBDIR += openseachest
     SUBDIR += openupsd
     SUBDIR += openzfs
     SUBDIR += openzfs-kmod
@@ -879,8 +883,8 @@
     SUBDIR += pear-Translation2
     SUBDIR += pecl-proctitle
     SUBDIR += pefs-kmod
-    SUBDIR += personality
     SUBDIR += perp
+    SUBDIR += personality
     SUBDIR += pesign
     SUBDIR += pfetch
     SUBDIR += pflogx
@@ -957,7 +961,6 @@
     SUBDIR += py-azure-cli-base
     SUBDIR += py-azure-cli-core
     SUBDIR += py-azure-cli-telemetry
-    SUBDIR += py-bcfg2
     SUBDIR += py-bitrot
     SUBDIR += py-borgmatic
     SUBDIR += py-cdmi
@@ -1046,7 +1049,6 @@
     SUBDIR += rcm
     SUBDIR += rdate
     SUBDIR += rdiff-backup
-    SUBDIR += rdiff-backup-devel
     SUBDIR += rdup
     SUBDIR += read-edid
     SUBDIR += realsync
@@ -1122,6 +1124,7 @@
     SUBDIR += rubygem-httplog
     SUBDIR += rubygem-itamae
     SUBDIR += rubygem-librarian-puppet
+    SUBDIR += rubygem-license-acceptance
     SUBDIR += rubygem-log4r
     SUBDIR += rubygem-logify
     SUBDIR += rubygem-mogilefs-client
@@ -1282,8 +1285,8 @@
     SUBDIR += tclsyslog
     SUBDIR += tcplist
     SUBDIR += tdir
+    SUBDIR += tealdeer
     SUBDIR += tenshi
-    SUBDIR += tentakel
     SUBDIR += terraform
     SUBDIR += terraform-provider-vultr
     SUBDIR += testdisk
@@ -1377,7 +1380,6 @@
     SUBDIR += udfclient
     SUBDIR += uefi-edk2-bhyve
     SUBDIR += uefi-edk2-bhyve-csm
-    SUBDIR += uefi-edk2-bhyve-devel
     SUBDIR += uefi-edk2-qemu
     SUBDIR += ufetch
     SUBDIR += ufs_copy
