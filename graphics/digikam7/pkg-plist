@@ -51,7 +51,6 @@ include/digikam/drawdecodersettings.h
 include/digikam/drawdecoding.h
 include/digikam/drawinfo.h
 include/digikam/dsavesettingswidget.h
-include/digikam/dshareddata.h
 include/digikam/dwizarddlg.h
 include/digikam/dwizardpage.h
 include/digikam/editortool.h
