@@ -108,6 +108,7 @@
     SUBDIR += R-cran-spdep
     SUBDIR += R-cran-sspir
     SUBDIR += R-cran-stabledist
+    SUBDIR += R-cran-statmod
     SUBDIR += R-cran-survey
     SUBDIR += R-cran-truncnorm
     SUBDIR += R-cran-units
@@ -200,6 +201,7 @@
     SUBDIR += crlibm
     SUBDIR += cryptominisat
     SUBDIR += csdp
+    SUBDIR += ctl-sat
     SUBDIR += curv
     SUBDIR += cvc3
     SUBDIR += cvc4
@@ -211,6 +213,16 @@
     SUBDIR += djbfft
     SUBDIR += drgeo
     SUBDIR += dsdp
+    SUBDIR += dune-alugrid
+    SUBDIR += dune-common
+    SUBDIR += dune-functions
+    SUBDIR += dune-geometry
+    SUBDIR += dune-grid
+    SUBDIR += dune-istl
+    SUBDIR += dune-localfunctions
+    SUBDIR += dune-pdelab
+    SUBDIR += dune-typetree
+    SUBDIR += dune-uggrid
     SUBDIR += e
     SUBDIR += ecos
     SUBDIR += edenmath
@@ -291,6 +303,7 @@
     SUBDIR += hmat-oss
     SUBDIR += hpipm
     SUBDIR += hs-Agda
+    SUBDIR += hs-penrose
     SUBDIR += hs-semigroups
     SUBDIR += ideep
     SUBDIR += ignition-math
@@ -337,6 +350,7 @@
     SUBDIR += libpoly
     SUBDIR += libqalculate
     SUBDIR += libranlip
+    SUBDIR += librdata
     SUBDIR += librsb
     SUBDIR += libtommath
     SUBDIR += libtsnnls
@@ -352,7 +366,6 @@
     SUBDIR += lrslib
     SUBDIR += ltl
     SUBDIR += ltl2ba
-    SUBDIR += lybniz
     SUBDIR += mate-calc
     SUBDIR += math77
     SUBDIR += mathgl
@@ -364,7 +377,6 @@
     SUBDIR += mbasecalc
     SUBDIR += mcsim
     SUBDIR += metis
-    SUBDIR += metis4
     SUBDIR += mfem
     SUBDIR += mingw32-libgmp
     SUBDIR += minisat
@@ -484,7 +496,6 @@
     SUBDIR += octave-forge-zenity
     SUBDIR += octave-forge-zeromq
     SUBDIR += octomap
-    SUBDIR += ogdf
     SUBDIR += oleo
     SUBDIR += openblas
     SUBDIR += openfst
@@ -692,7 +703,6 @@
     SUBDIR += py-apgl
     SUBDIR += py-arviz
     SUBDIR += py-autograd
-    SUBDIR += py-basemap
     SUBDIR += py-basemap-data
     SUBDIR += py-bayesian-optimization
     SUBDIR += py-bitmath
@@ -700,6 +710,7 @@
     SUBDIR += py-bottleneck
     SUBDIR += py-cdecimal
     SUBDIR += py-chaospy
+    SUBDIR += py-claripy
     SUBDIR += py-cma
     SUBDIR += py-colormath
     SUBDIR += py-cryptominisat
@@ -769,6 +780,7 @@
     SUBDIR += py-pynndescent
     SUBDIR += py-pyodeint
     SUBDIR += py-pyodesys
+    SUBDIR += py-pysmt
     SUBDIR += py-pysparse
     SUBDIR += py-pystan
     SUBDIR += py-pysym
@@ -798,7 +810,6 @@
     SUBDIR += py-ufl
     SUBDIR += py-uncertainties
     SUBDIR += py-vincenty
-    SUBDIR += py-viper
     SUBDIR += py-yt
     SUBDIR += py-z3-solver
     SUBDIR += qalculate

@@ -183,6 +183,7 @@
     SUBDIR += libxshmfence
     SUBDIR += lightdm
     SUBDIR += lightdm-gtk-greeter
+    SUBDIR += lightdm-gtk-greeter-settings
     SUBDIR += lilyterm
     SUBDIR += linux-c7-libxkbcommon
     SUBDIR += linux-c7-pixman
@@ -267,7 +268,6 @@
     SUBDIR += py-qt5-opengl
     SUBDIR += py-xcffib
     SUBDIR += py-xdot
-    SUBDIR += py-xdot06
     SUBDIR += qimageblitz
     SUBDIR += qt5-qev
     SUBDIR += qt5-x11extras
@@ -278,12 +278,10 @@
     SUBDIR += rofi
     SUBDIR += rofi-calc
     SUBDIR += rofi-pass
-    SUBDIR += rox-wallpaper
     SUBDIR += roxbg
     SUBDIR += roxterm
     SUBDIR += rsibreak
     SUBDIR += rubygem-gnome
-    SUBDIR += run_scaled
     SUBDIR += rxvt
     SUBDIR += rxvt-unicode
     SUBDIR += sakura
@@ -318,7 +316,6 @@
     SUBDIR += tabbed
     SUBDIR += temperature.app
     SUBDIR += terminal.app
-    SUBDIR += terminator
     SUBDIR += terminology
     SUBDIR += thinglaunch
     SUBDIR += thingylaunch
@@ -335,7 +332,6 @@
     SUBDIR += wallutils
     SUBDIR += waybar
     SUBDIR += wbar
-    SUBDIR += wbarconf
     SUBDIR += wcm
     SUBDIR += wdisplays
     SUBDIR += wdm
@@ -470,7 +466,6 @@
     SUBDIR += xorg-minimal
     SUBDIR += xorgproto
     SUBDIR += xpr
-    SUBDIR += xpra
     SUBDIR += xprintidle
     SUBDIR += xprompt
     SUBDIR += xprop

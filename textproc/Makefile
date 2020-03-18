@@ -107,6 +107,7 @@
     SUBDIR += csb-aspell
     SUBDIR += csv2latex
     SUBDIR += csvdiff
+    SUBDIR += csvq
     SUBDIR += ctpl
     SUBDIR += ctpp2
     SUBDIR += cwtext
@@ -155,7 +156,6 @@
     SUBDIR += dwdiff
     SUBDIR += easydiff
     SUBDIR += ebook-tools
-    SUBDIR += ecromedos
     SUBDIR += ekhtml
     SUBDIR += el-aspell
     SUBDIR += el-hyphen
@@ -249,6 +249,7 @@
     SUBDIR += hs-lhs2tex
     SUBDIR += hs-pandoc
     SUBDIR += hs-pandoc-citeproc
+    SUBDIR += hs-pandoc-crossref
     SUBDIR += hs-yaml
     SUBDIR += hsb-aspell
     SUBDIR += htdig
@@ -314,12 +315,14 @@
     SUBDIR += jrefentry
     SUBDIR += jshon
     SUBDIR += json-yaml
+    SUBDIR += jtc
     SUBDIR += kdiff3
     SUBDIR += kenlm
     SUBDIR += kf5-kcodecs
     SUBDIR += kf5-sonnet
     SUBDIR += kf5-syntax-highlighting
     SUBDIR += kibana6
+    SUBDIR += kibana7
     SUBDIR += kiss-templates
     SUBDIR += kmfl-european-latin
     SUBDIR += kmfl-khmer
@@ -392,6 +395,7 @@
     SUBDIR += libxml++26-reference
     SUBDIR += libxml2
     SUBDIR += libxml2-reference
+    SUBDIR += libxmlbird
     SUBDIR += libxode
     SUBDIR += libxslt
     SUBDIR += libxslt-reference
@@ -476,6 +480,7 @@
     SUBDIR += p5-Algorithm-RabinKarp
     SUBDIR += p5-Apache-ParseLog
     SUBDIR += p5-Apache-Solr
+    SUBDIR += p5-Template-AutoFilter
     SUBDIR += p5-BibTeX-Parser
     SUBDIR += p5-BigIP-ParseConfig
     SUBDIR += p5-Bloom-Filter
@@ -1127,6 +1132,7 @@
     SUBDIR += pcrs
     SUBDIR += pdfgrep
     SUBDIR += pdfoutline
+    SUBDIR += pdfresurrect
     SUBDIR += pdfsandwich
     SUBDIR += pdftohtml
     SUBDIR += pear-File_Fortune
@@ -1212,6 +1218,7 @@
     SUBDIR += py-QDarkStyle
     SUBDIR += py-Tempita
     SUBDIR += py-acora
+    SUBDIR += py-aeidon
     SUBDIR += py-agate
     SUBDIR += py-agate-dbf
     SUBDIR += py-agate-excel
@@ -1342,6 +1349,7 @@
     SUBDIR += py-python-slugify
     SUBDIR += py-python-xmp-toolkit
     SUBDIR += py-pytidylib
+    SUBDIR += py-pytoml
     SUBDIR += py-pyx12
     SUBDIR += py-qrcode
     SUBDIR += py-qt5-xml
@@ -1396,7 +1404,6 @@
     SUBDIR += py-ucl
     SUBDIR += py-ufal.udpipe
     SUBDIR += py-whoosh
-    SUBDIR += py-wicked
     SUBDIR += py-wordnet
     SUBDIR += py-wstools
     SUBDIR += py-wtf-peewee
@@ -1409,7 +1416,6 @@
     SUBDIR += py-xml-default-dict
     SUBDIR += py-xmldiff
     SUBDIR += py-yapf
-    SUBDIR += py-zope.app.i18n
     SUBDIR += py-zope.app.locales
     SUBDIR += py-zope.i18nmessageid
     SUBDIR += py-zope.structuredtext
@@ -1432,6 +1438,7 @@
     SUBDIR += re-flex
     SUBDIR += re_graph
     SUBDIR += redet
+    SUBDIR += redisearch
     SUBDIR += redland
     SUBDIR += redland-bindings
     SUBDIR += refdb
@@ -1461,9 +1468,9 @@
     SUBDIR += ruby-rdtool
     SUBDIR += ruby-rttool
     SUBDIR += ruby-xmlparser
-    SUBDIR += rubygem-actionpack-xml_parser
-    SUBDIR += rubygem-actionpack-xml_parser1
-    SUBDIR += rubygem-actionpack-xml_parser52
+    SUBDIR += rubygem-actionpack-xml_parser-rails5
+    SUBDIR += rubygem-actionpack-xml_parser-rails52
+    SUBDIR += rubygem-actionpack-xml_parser1-rails4
     SUBDIR += rubygem-actiontext60
     SUBDIR += rubygem-albino
     SUBDIR += rubygem-amatch
@@ -1471,7 +1478,7 @@
     SUBDIR += rubygem-asciidoctor-diagram
     SUBDIR += rubygem-asciidoctor-include-ext
     SUBDIR += rubygem-asciidoctor-plantuml
-    SUBDIR += rubygem-asciidoctor-plantuml009
+    SUBDIR += rubygem-asciidoctor-plantuml0010
     SUBDIR += rubygem-autoprefixer-rails
     SUBDIR += rubygem-babel-source
     SUBDIR += rubygem-babel-transpiler
@@ -1501,21 +1508,16 @@
     SUBDIR += rubygem-docdiff
     SUBDIR += rubygem-elasticsearch
     SUBDIR += rubygem-elasticsearch-api
-    SUBDIR += rubygem-elasticsearch-api503
     SUBDIR += rubygem-elasticsearch-api6
     SUBDIR += rubygem-elasticsearch-dsl
     SUBDIR += rubygem-elasticsearch-model
-    SUBDIR += rubygem-elasticsearch-model019
     SUBDIR += rubygem-elasticsearch-model6
     SUBDIR += rubygem-elasticsearch-persistence
     SUBDIR += rubygem-elasticsearch-rails
-    SUBDIR += rubygem-elasticsearch-rails019
     SUBDIR += rubygem-elasticsearch-rails6
     SUBDIR += rubygem-elasticsearch-transport
-    SUBDIR += rubygem-elasticsearch-transport503
     SUBDIR += rubygem-elasticsearch-transport6
     SUBDIR += rubygem-elasticsearch-xpack
-    SUBDIR += rubygem-elasticsearch503
     SUBDIR += rubygem-elasticsearch6
     SUBDIR += rubygem-emot
     SUBDIR += rubygem-escape_utils
@@ -1576,6 +1578,7 @@
     SUBDIR += rubygem-org-ruby
     SUBDIR += rubygem-ox
     SUBDIR += rubygem-parslet
+    SUBDIR += rubygem-parslet1
     SUBDIR += rubygem-phone
     SUBDIR += rubygem-pretty-xml
     SUBDIR += rubygem-psych
@@ -1744,6 +1747,7 @@
     SUBDIR += texi2html
     SUBDIR += texi2mdoc
     SUBDIR += textogif
+    SUBDIR += textql
     SUBDIR += the_silver_searcher
     SUBDIR += ti-hunspell
     SUBDIR += tidyp
