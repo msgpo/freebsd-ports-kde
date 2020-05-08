@@ -3,6 +3,7 @@
 PORTNAME=	dune-geometry
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2.7.0
+PORTREVISION=	2
 CATEGORIES=	math
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -21,7 +22,6 @@ USES=		cmake compiler:c++17-lang fortran pkgconfig python
 USE_GITLAB=	yes
 USE_LDCONFIG=	yes
 
-GL_ACCOUNT=	core
 GL_SITE=	https://gitlab.dune-project.org
 GL_ACCOUNT=	core
 GL_COMMIT=	bcf9e469f3c105d5f497dbf81801e8dbd09cde92

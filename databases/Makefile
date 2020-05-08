@@ -32,6 +32,7 @@
     SUBDIR += c3p0
     SUBDIR += cassandra-cpp-driver
     SUBDIR += cassandra3
+    SUBDIR += cassandra4
     SUBDIR += casstcl
     SUBDIR += cayley
     SUBDIR += cdb
@@ -128,6 +129,7 @@
     SUBDIR += kyototycoon
     SUBDIR += ldb14
     SUBDIR += ldb15
+    SUBDIR += ldb20
     SUBDIR += leo_center
     SUBDIR += leofs
     SUBDIR += leveldb
@@ -181,14 +183,10 @@
     SUBDIR += mariadb103-server
     SUBDIR += mariadb104-client
     SUBDIR += mariadb104-server
-    SUBDIR += mariadb55-client
-    SUBDIR += mariadb55-server
     SUBDIR += mdbtools
     SUBDIR += mdcached
     SUBDIR += memcached
     SUBDIR += memcacheq
-    SUBDIR += mongodb34
-    SUBDIR += mongodb34-tools
     SUBDIR += mongodb36
     SUBDIR += mongodb36-tools
     SUBDIR += mongodb40
@@ -592,11 +590,11 @@
     SUBDIR += pglogical
     SUBDIR += pgmetrics
     SUBDIR += pgmodeler
-    SUBDIR += pgpool
     SUBDIR += pgpool-II-35
     SUBDIR += pgpool-II-36
     SUBDIR += pgpool-II-37
     SUBDIR += pgpool-II-40
+    SUBDIR += pgpool-II-41
     SUBDIR += pgreplay
     SUBDIR += pgroonga
     SUBDIR += pgrouting
@@ -733,6 +731,7 @@
     SUBDIR += proftpd-mod_sql_postgres
     SUBDIR += proftpd-mod_sql_sqlite
     SUBDIR += proftpd-mod_sql_tds
+    SUBDIR += prometheus-postgresql-adapter
     SUBDIR += pspg
     SUBDIR += puppetdb-terminus5
     SUBDIR += puppetdb-terminus6
@@ -756,7 +755,6 @@
     SUBDIR += py-bsddb3
     SUBDIR += py-carbon
     SUBDIR += py-cassandra-driver
-    SUBDIR += py-cdb
     SUBDIR += py-couchdb
     SUBDIR += py-dbf
     SUBDIR += py-dbutils
@@ -812,7 +810,6 @@
     SUBDIR += py-pymysql
     SUBDIR += py-pyodbc
     SUBDIR += py-pypuppetdb
-    SUBDIR += py-pypuppetdb03
     SUBDIR += py-pytc
     SUBDIR += py-python-arango
     SUBDIR += py-python-memcached
@@ -828,6 +825,7 @@
     SUBDIR += py-sispy
     SUBDIR += py-south
     SUBDIR += py-sqlalchemy-migrate
+    SUBDIR += py-sqlalchemy-utils
     SUBDIR += py-sqlalchemy10
     SUBDIR += py-sqlalchemy11
     SUBDIR += py-sqlalchemy12

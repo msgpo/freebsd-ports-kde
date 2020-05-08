@@ -23,9 +23,9 @@
     SUBDIR += bdelta
     SUBDIR += bestfit
     SUBDIR += bible-kjv
+    SUBDIR += biblesync
     SUBDIR += bibletime
     SUBDIR += biblical-curse
-    SUBDIR += biblesync
     SUBDIR += binclock
     SUBDIR += biosfont-demos
     SUBDIR += birthday
@@ -239,6 +239,7 @@
     SUBDIR += metalink-checker
     SUBDIR += metalink-tools
     SUBDIR += mime-support
+    SUBDIR += minidnn
     SUBDIR += mirmon
     SUBDIR += mmdnn
     SUBDIR += mmv
@@ -249,7 +250,9 @@
     SUBDIR += mtx
     SUBDIR += mxnet
     SUBDIR += najitool
+    SUBDIR += ncnn
     SUBDIR += netron
+    SUBDIR += ngraph
     SUBDIR += nms
     SUBDIR += nn-insight
     SUBDIR += nnn
@@ -412,6 +415,7 @@
     SUBDIR += py-spdx-tools
     SUBDIR += py-tflearn
     SUBDIR += py-tflite
+    SUBDIR += py-tflite-support
     SUBDIR += py-toil
     SUBDIR += py-tqdm
     SUBDIR += py-tvm
@@ -444,6 +448,7 @@
     SUBDIR += rubygem-mime-types-data
     SUBDIR += rubygem-mime-types1
     SUBDIR += rubygem-mimemagic
+    SUBDIR += rubygem-octicons
     SUBDIR += rubygem-rabbit
     SUBDIR += rubygem-vpim
     SUBDIR += rump

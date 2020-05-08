@@ -3,7 +3,7 @@
 PORTNAME=	dune-typetree
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2.7.0rc2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	math
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -22,7 +22,6 @@ RUN_DEPENDS=	dune-common>0:math/dune-common \
 USES=		cmake compiler:c++17-lang fortran pkgconfig
 USE_GITLAB=	yes
 
-GL_ACCOUNT=	core
 GL_SITE=	https://gitlab.dune-project.org
 GL_ACCOUNT=	staging
 GL_COMMIT=	b6427163a5ef45996471edad672ecab584aa490c

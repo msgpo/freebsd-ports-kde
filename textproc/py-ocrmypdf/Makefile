@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	ocrmypdf
-DISTVERSION=	9.6.0
+DISTVERSION=	9.8.0
 CATEGORIES=	textproc python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -19,7 +19,7 @@ BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}cffi>=1.9.1:devel/py-cffi@${PY_FLAVOR} \
 LIB_DEPENDS=	liblept.so:graphics/leptonica
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}cffi>=1.9.1:devel/py-cffi@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}img2pdf>=0.3.0,<0.4:graphics/py-img2pdf@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}pillow>=6.2.0:graphics/py-pillow@${PY_FLAVOR} \
+		${PY_PILLOW} \
 		${PYTHON_PKGNAMEPREFIX}tqdm>=4:misc/py-tqdm@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}reportlab>=3.3.0:print/py-reportlab@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}chardet>=3.0.4,<4:textproc/py-chardet@${PY_FLAVOR} \
@@ -33,6 +33,7 @@ TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytest>=4.4.1:devel/py-pytest@${PY_FLAVOR} 
 		${PYTHON_PKGNAMEPREFIX}python-xmp-toolkit>=2.0.1:textproc/py-python-xmp-toolkit@${PY_FLAVOR}
 
 USES=		ghostscript:run python:3.6+ shebangfix
+USE_LOCALE=	en_US.UTF-8
 USE_PYTHON=	autoplist concurrent distutils
 
 SHEBANG_FILES=	src/ocrmypdf/__main__.py \
@@ -41,7 +42,6 @@ SHEBANG_FILES=	src/ocrmypdf/__main__.py \
 		src/ocrmypdf/pdfinfo/__init__.py \
 		tests/spoof/gs_feature_elision.py \
 		tests/spoof/gs_pdfa_failure.py \
-		tests/spoof/tesseract_badutf8.py \
 		tests/spoof/tesseract_big_image_error.py \
 		tests/spoof/tesseract_cache.py \
 		tests/spoof/tesseract_noop.py \
@@ -49,8 +49,6 @@ SHEBANG_FILES=	src/ocrmypdf/__main__.py \
 		tests/spoof/gs_render_failure.py \
 		tests/spoof/gs_raster_failure.py \
 		tests/spoof/tesseract_crash.py
-
-USE_LOCALE=	en_US.UTF-8
 
 NO_ARCH=	yes
 

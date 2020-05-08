@@ -504,6 +504,7 @@
     SUBDIR += py-cyruslib
     SUBDIR += py-dkimpy
     SUBDIR += py-email_reply_parser
+    SUBDIR += py-email-validator
     SUBDIR += py-flask-mail
     SUBDIR += py-flufl.bounce
     SUBDIR += py-fuglu
@@ -586,6 +587,7 @@
     SUBDIR += rubygem-email_reply_parser-discourse
     SUBDIR += rubygem-email_reply_trimmer
     SUBDIR += rubygem-exception_notification
+    SUBDIR += rubygem-gitlab-mail_room
     SUBDIR += rubygem-mail
     SUBDIR += rubygem-mail_room
     SUBDIR += rubygem-mailboxer

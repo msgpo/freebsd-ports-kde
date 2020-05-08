@@ -3,7 +3,7 @@
 PORTNAME=	xen
 PKGNAMESUFFIX=	-tools
 PORTVERSION=	4.13.0
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	sysutils emulators
 MASTER_SITES=	http://downloads.xenproject.org/release/xen/${PORTVERSION}/
 
@@ -27,7 +27,8 @@ OPTIONS_DEFAULT=	DOCS
 OPTIONS_SUB=		yes
 
 SPICE_DESC=		Enable SPICE protocol for QEMU
-SPICE_CONFIGURE_WITH=	extra-qemuu-configure-args="--enable-spice"
+SPICE_CONFIGURE_ON=	--with-extra-qemuu-configure-args="--enable-spice --disable-user"
+SPICE_CONFIGURE_OFF=	--with-extra-qemuu-configure-args="--disable-user"
 SPICE_BUILD_DEPENDS=	spice-protocol>=0.12.10:devel/spice-protocol
 SPICE_LIB_DEPENDS=	libspice-server.so:devel/libspice-server
 
@@ -41,7 +42,7 @@ USE_LDCONFIG=	yes
 USE_PYTHON=	py3kplist
 HAS_CONFIGURE=	yes
 # Set ARCH=x86_64 in order to overwrite the environment ARCH=amd64
-MAKE_ARGS=	clang=y ARCH=x86_64
+MAKE_ARGS=	clang=y ARCH=x86_64 EXTRA_CFLAGS_XEN_TOOLS=-Wno-misleading-indentation
 
 CONFIGURE_ARGS+=	--with-system-seabios=${LOCALBASE}/share/seabios/bios.bin \
 			--mandir=${MANPREFIX}/man
@@ -55,6 +56,9 @@ ALL_TARGET=		tools
 DOCS_ALL_TARGET=	docs
 INSTALL_TARGET=		install-tools
 DOCS_INSTALL_TARGET=	install-docs
+
+# Fix build with clang 10.0 (re convert enum constant to boolean)
+EXTRA_PATCHES+= ${PATCHDIR}/0001-libfsimage-fix-clang-10-build.patch:-p1
 
 .include <bsd.port.options.mk>
 

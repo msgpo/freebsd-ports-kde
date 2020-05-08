@@ -10,6 +10,7 @@
     SUBDIR += alegreya-sans
     SUBDIR += alfont
     SUBDIR += andika
+    SUBDIR += anomaly-mono
     SUBDIR += anonymous-pro
     SUBDIR += apl385
     SUBDIR += artwiz-aleczapka
@@ -100,6 +101,7 @@
     SUBDIR += fontconfig
     SUBDIR += fontconfig-reference
     SUBDIR += fontmatrix
+    SUBDIR += fontpreview
     SUBDIR += fonts-indic
     SUBDIR += fonttosfnt
     SUBDIR += freefont-ttf
@@ -123,6 +125,7 @@
     SUBDIR += iosevka
     SUBDIR += isabella
     SUBDIR += jetbrains-mono
+    SUBDIR += jf-openhuninn
     SUBDIR += jmk-x11-fonts
     SUBDIR += junction
     SUBDIR += junicode
@@ -144,6 +147,7 @@
     SUBDIR += linuxlibertine
     SUBDIR += linuxlibertine-g
     SUBDIR += lohit
+    SUBDIR += manrope
     SUBDIR += manu-gothica
     SUBDIR += material-icons-ttf
     SUBDIR += materialdesign-ttf
@@ -157,6 +161,7 @@
     SUBDIR += monoid
     SUBDIR += montecarlo_fonts
     SUBDIR += montserrat
+    SUBDIR += mourier
     SUBDIR += moveable-type-fonts
     SUBDIR += nerd-fonts
     SUBDIR += nexfontsel
@@ -211,6 +216,7 @@
     SUBDIR += sourcesanspro-ttf
     SUBDIR += sourceserifpro-ttf
     SUBDIR += spleen
+    SUBDIR += steps-mono
     SUBDIR += stix-fonts
     SUBDIR += sudo-font
     SUBDIR += suxus

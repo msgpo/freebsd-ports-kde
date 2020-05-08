@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	actionmailbox
-PORTVERSION=	6.0.2.1
+PORTVERSION=	6.0.2.2
 CATEGORIES=	mail rubygems
 MASTER_SITES=	RG
 PKGNAMESUFFIX=	60
@@ -12,8 +12,6 @@ COMMENT=	Receive and process incoming emails in Rails applications
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/MIT-LICENSE
-
-BROKEN_RUBY24=	yes
 
 RUN_DEPENDS=	rubygem-actionpack60>=${PORTVERSION}:www/rubygem-actionpack60 \
 		rubygem-activejob60>=${PORTVERSION}:devel/rubygem-activejob60 \

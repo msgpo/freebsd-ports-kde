@@ -2,8 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	postfix
-DISTVERSION=	3.4.10
-PORTREVISION?=	0
+DISTVERSION=	3.5.1
+PORTREVISION?=	1
 PORTEPOCH=	1
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.porcupine.org/mirrors/postfix-release/ \
@@ -24,7 +24,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 LICENSE_NAME_IPL10=	IBM PUBLIC LICENSE VERSION 1.0
 LICENSE_PERMS_IPL10=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
-PORTSCOUT=	limit:^3\.[4-5]\.
+PORTSCOUT=	limit:^3\.5\.
 
 CONFLICTS_INSTALL?=	courier-0.* opensmtpd-[0-9]* sendmail-8.* sendmail+*-8.* \
 		postfix-current-*

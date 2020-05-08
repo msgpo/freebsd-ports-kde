@@ -3,6 +3,7 @@
 PORTNAME=	dune-uggrid
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2.7.0rc2
+PORTREVISION=	2
 CATEGORIES=	math
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -22,7 +23,6 @@ USES=		cmake compiler:c++17-lang fortran pkgconfig python
 USE_GITLAB=	yes
 USE_LDCONFIG=	yes
 
-GL_ACCOUNT=	core
 GL_SITE=	https://gitlab.dune-project.org
 GL_ACCOUNT=	staging
 GL_COMMIT=	1fce83c6efe2e0f77d0ee1b3cf6335172f1ace37
