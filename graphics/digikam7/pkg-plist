@@ -25,6 +25,7 @@ include/digikam/digikam_core_export.h
 include/digikam/digikam_database_export.h
 include/digikam/digikam_export.h
 include/digikam/digikam_globals.h
+include/digikam/digikam_gui_export.h
 include/digikam/dimg.h
 include/digikam/dimgbuiltinfilter.h
 include/digikam/dimgloaderobserver.h
@@ -217,6 +218,7 @@ lib/libdigikamgui.so.%%SHLIB_VER%%
 %%QT_PLUGINDIR%%/digikam/generic/Generic_PrintCreator_Plugin.so
 %%QT_PLUGINDIR%%/digikam/generic/Generic_Rajce_Plugin.so
 %%QT_PLUGINDIR%%/digikam/generic/Generic_SendByMail_Plugin.so
+%%QT_PLUGINDIR%%/digikam/generic/Generic_SlideShow_Plugin.so
 %%QT_PLUGINDIR%%/digikam/generic/Generic_SmugMug_Plugin.so
 %%QT_PLUGINDIR%%/digikam/generic/Generic_TimeAdjust_Plugin.so
 %%QT_PLUGINDIR%%/digikam/generic/Generic_Twitter_Plugin.so
