@@ -497,6 +497,7 @@
     SUBDIR += dragon
     SUBDIR += ds2
     SUBDIR += dsymbol
+    SUBDIR += dtool
     SUBDIR += dub
     SUBDIR += dulwich
     SUBDIR += dupl
@@ -1558,6 +1559,7 @@
     SUBDIR += ninja
     SUBDIR += nlohmann-json
     SUBDIR += node-thrift
+    SUBDIR += notcurses
     SUBDIR += npth
     SUBDIR += nsgenbind
     SUBDIR += nspr
@@ -4295,6 +4297,7 @@
     SUBDIR += py-cxx
     SUBDIR += py-cycler
     SUBDIR += py-cymem
+    SUBDIR += py-cysignals
     SUBDIR += py-cytoolz
     SUBDIR += py-d2to1
     SUBDIR += py-daemon
@@ -4570,6 +4573,7 @@
     SUBDIR += py-kazoo
     SUBDIR += py-keystone-engine
     SUBDIR += py-keystoneauth1
+    SUBDIR += py-keystoneauth13
     SUBDIR += py-keystonemiddleware
     SUBDIR += py-keystonemiddleware8
     SUBDIR += py-kid
@@ -4727,6 +4731,7 @@
     SUBDIR += py-oslo.rootwrap
     SUBDIR += py-oslo.rootwrap5
     SUBDIR += py-oslo.serialization
+    SUBDIR += py-oslo.serialization2
     SUBDIR += py-oslo.service
     SUBDIR += py-oslo.service1
     SUBDIR += py-oslo.upgradecheck
@@ -6528,9 +6533,9 @@
     SUBDIR += rubygem-web-console3-rails52
     SUBDIR += rubygem-webby
     SUBDIR += rubygem-webfinger
-    SUBDIR += rubygem-webpacker-rails5
-    SUBDIR += rubygem-webpacker-rails50
     SUBDIR += rubygem-webpacker-rails60
+    SUBDIR += rubygem-webpacker4-rails5
+    SUBDIR += rubygem-webpacker4-rails50
     SUBDIR += rubygem-webpacker4-rails60
     SUBDIR += rubygem-will_paginate
     SUBDIR += rubygem-windows_error
