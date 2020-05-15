@@ -1,11 +1,17 @@
+bin/kstats
+bin/kstatsviewer
 bin/ksysguard
 bin/ksysguardd
 etc/ksysguarddrc
 %%PCAP%%lib/libexec/ksysguard/ksgrd_network_helper
 lib/libkdeinit5_ksysguard.so
+lib/libksgrdbackend.so
+%%QT_PLUGINDIR%%/ksysguard/ksysguard_ksgrd.so
+%%QT_PLUGINDIR%%/ksysguard/ksysguard_plugin_nvidiaglobal.so
 %%PCAP%%%%QT_PLUGINDIR%%/ksysguard/process/ksysguard_plugin_network.so
 %%QT_PLUGINDIR%%/ksysguard/process/ksysguard_plugin_nvidia.so
 share/applications/org.kde.ksysguard.desktop
+share/dbus-1/services/org.kde.kstats.service
 share/doc/HTML/ca/ksysguard/index.cache.bz2
 share/doc/HTML/ca/ksysguard/index.docbook
 share/doc/HTML/de/ksysguard/index.cache.bz2

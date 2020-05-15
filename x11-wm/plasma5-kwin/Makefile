@@ -33,8 +33,8 @@ USE_GL=		egl
 USE_KDE=	activities activities attica auth breeze codecs \
 		completion config configwidgets coreaddons crash decoration \
 		doctools doctools globalaccel i18n iconthemes idletime init \
-		jobwidgets kcmutils kdeclarative kio package kscreenlocker \
-		newstuff notifications plasma-framework service sonnet \
+		jobwidgets kcmutils kdeclarative kio kwayland-server kscreenlocker \
+		newstuff notifications package plasma-framework service sonnet \
 		textwidgets wayland widgetsaddons windowsystem xmlgui
 USE_LDCONFIG=	yes
 USE_QT=		concurrent core dbus declarative gui multimedia network script \
