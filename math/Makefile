@@ -315,7 +315,6 @@
     SUBDIR += hpipm
     SUBDIR += hs-Agda
     SUBDIR += hs-penrose
-    SUBDIR += hs-semigroups
     SUBDIR += ideep
     SUBDIR += ignition-math
     SUBDIR += igraph
@@ -674,6 +673,7 @@
     SUBDIR += p5-Task-Math-Symbolic
     SUBDIR += p5-Text-AsciiTeX
     SUBDIR += p5-bignum
+    SUBDIR += palp
     SUBDIR += pantheon-calculator
     SUBDIR += pari
     SUBDIR += pari_elldata
@@ -740,6 +740,7 @@
     SUBDIR += py-cvxopt
     SUBDIR += py-cvxpy
     SUBDIR += py-cyipopt
+    SUBDIR += py-cypari2
     SUBDIR += py-deap
     SUBDIR += py-ecos
     SUBDIR += py-fastcluster
@@ -752,10 +753,12 @@
     SUBDIR += py-gimmik
     SUBDIR += py-gmpy
     SUBDIR += py-gmpy2
+    SUBDIR += py-gmpy2-devel
     SUBDIR += py-grandalf
     SUBDIR += py-graphillion
     SUBDIR += py-gym
     SUBDIR += py-hdbscan
+    SUBDIR += py-hdmedians
     SUBDIR += py-igraph
     SUBDIR += py-intspan
     SUBDIR += py-keras
@@ -777,7 +780,6 @@
     SUBDIR += py-numexpr
     SUBDIR += py-numpy
     SUBDIR += py-nzmath
-    SUBDIR += py-onnx
     SUBDIR += py-osqp
     SUBDIR += py-pandas
     SUBDIR += py-pandas-datareader
@@ -786,6 +788,7 @@
     SUBDIR += py-petsc4py
     SUBDIR += py-piranha
     SUBDIR += py-plastex
+    SUBDIR += py-pplpy
     SUBDIR += py-primme
     SUBDIR += py-pyFFTW
     SUBDIR += py-pyasp
@@ -858,10 +861,13 @@
     SUBDIR += rngstreams
     SUBDIR += rocs
     SUBDIR += rpcalc
+    SUBDIR += rubiks
     SUBDIR += rubygem-algebra
+    SUBDIR += rubygem-enumerable-statistics
     SUBDIR += rubygem-expression_parser
     SUBDIR += rubygem-fftw3
     SUBDIR += rubygem-mathn
+    SUBDIR += rubygem-matrix
     SUBDIR += rubygem-mtrc
     SUBDIR += rubygem-narray
     SUBDIR += rubygem-narray_miss
@@ -903,6 +909,7 @@
     SUBDIR += superlu
     SUBDIR += symmetrica
     SUBDIR += symphony
+    SUBDIR += sympow
     SUBDIR += tablix
     SUBDIR += taucs
     SUBDIR += tblis

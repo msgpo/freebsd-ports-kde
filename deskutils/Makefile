@@ -110,9 +110,11 @@
     SUBDIR += horde-nag
     SUBDIR += hot-babe
     SUBDIR += howm
+    SUBDIR += hs-arbtt
     SUBDIR += ical
     SUBDIR += jjclient
     SUBDIR += jlj
+    SUBDIR += just
     SUBDIR += kaddressbook
     SUBDIR += kalarm
     SUBDIR += kcharselect

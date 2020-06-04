@@ -3,6 +3,7 @@
 
 PORTNAME=	inkscape
 PORTVERSION=	1.0
+PORTREVISION=	2
 CATEGORIES=	graphics gnome
 MASTER_SITES=	https://media.inkscape.org/dl/resources/file/
 
@@ -47,7 +48,7 @@ RUN_DEPENDS=	${PYNUMPY} \
 USES=		compiler:c++11-lib cmake cpe desktop-file-utils gnome \
 		iconv:wchar_t jpeg pathfix pkgconfig python:3.6+ \
 		shebangfix tar:xz xorg
-USE_GNOME=	gtkmm30 gvfs libxml2 libxslt
+USE_GNOME=	gtkmm30 libxml2 libxslt
 USE_XORG=	sm ice x11 xext
 USE_LDCONFIG=	yes
 
@@ -58,7 +59,7 @@ INSTALLS_ICONS=	yes
 SHEBANG_FILES=	share/extensions/*.py share/extensions/genpofiles.sh \
 		share/templates/*.py man/fix-roff-punct
 
-OPTIONS_DEFINE=		OPENMP POPPLER VISIO CDR DBUS WPG
+OPTIONS_DEFINE=		OPENMP POPPLER VISIO CDR DBUS WPG GVFS NLS
 OPTIONS_DEFAULT=	POPPLER VISIO CDR WPG GM
 OPTIONS_DEFAULT_amd64=	OPENMP
 OPTIONS_SINGLE=		IMAGICK
@@ -73,6 +74,8 @@ CDR_LIB_DEPENDS=	librevenge-stream-0.0.so:textproc/librevenge \
 DBUS_CMAKE_BOOL=	WITH_DBUS
 DBUS_LIB_DEPENDS=	libdbus-glib-1.so:devel/dbus-glib \
 			libdbus-1.so:devel/dbus
+
+GVFS_USE=		GNOME=gvfs
 
 OPENMP_USES=		compiler:openmp
 OPENMP_CMAKE_BOOL=	WITH_OPENMP
@@ -98,10 +101,8 @@ IMAGICK6_CMAKE_BOOL=	WITH_IMAGE_MAGICK
 GM_DESC=		Use GraphicsMagick
 GM_LIB_DEPENDS=		libGraphicsMagick.so:graphics/GraphicsMagick
 
-# temporary until the build works for the !NLS case
-USES+=			gettext
-#NLS_CMAKE_BOOL=		WITH_NLS
-#NLS_USES=		gettext
+NLS_CMAKE_BOOL=		WITH_NLS
+NLS_USES=		gettext
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|COMMAND python3|COMMAND ${PYTHON_VERSION}|g' \

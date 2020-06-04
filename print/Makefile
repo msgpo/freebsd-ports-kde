@@ -60,7 +60,6 @@
     SUBDIR += fpdf
     SUBDIR += freetype
     SUBDIR += freetype2
-    SUBDIR += frescobaldi
     SUBDIR += ft2demos
     SUBDIR += ghostscript7-base
     SUBDIR += ghostscript7-commfont
@@ -178,12 +177,14 @@
     SUBDIR += py-fonttools
     SUBDIR += py-fonttools3
     SUBDIR += py-fpdf
+    SUBDIR += py-frescobaldi
     SUBDIR += py-pdf
     SUBDIR += py-pdf2
     SUBDIR += py-pollyreports
     SUBDIR += py-preppy
     SUBDIR += py-psautohint
     SUBDIR += py-pycups
+    SUBDIR += py-pycups1
     SUBDIR += py-pyscript
     SUBDIR += py-python-ly
     SUBDIR += py-qt5-printsupport

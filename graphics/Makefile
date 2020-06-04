@@ -441,6 +441,7 @@
     SUBDIR += libgfx
     SUBDIR += libgltext
     SUBDIR += libgltf
+    SUBDIR += libglvnd
     SUBDIR += libgnomecanvas
     SUBDIR += libgnomecanvas-reference
     SUBDIR += libgnomecanvasmm26
@@ -528,6 +529,7 @@
     SUBDIR += megapov
     SUBDIR += meh
     SUBDIR += mesa-demos
+    SUBDIR += mesa-devel
     SUBDIR += mesa-dri
     SUBDIR += mesa-libs
     SUBDIR += metacam
@@ -1024,6 +1026,7 @@
     SUBDIR += tinyows
     SUBDIR += tkpng
     SUBDIR += togl
+    SUBDIR += tslib
     SUBDIR += ttygif
     SUBDIR += ttyplot
     SUBDIR += tumble
@@ -1041,6 +1044,7 @@
     SUBDIR += vigra
     SUBDIR += vips
     SUBDIR += visprint
+    SUBDIR += viu
     SUBDIR += vkd3d
     SUBDIR += volpack
     SUBDIR += vp
