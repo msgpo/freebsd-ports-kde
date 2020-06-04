@@ -42,7 +42,8 @@ USE_QT=		concurrent core dbus declarative gui multimedia network script \
 		buildtools_build qmake_build \
 		quickcontrols2_run virtualkeyboard_run
 USE_XORG=	ice sm x11 xcb xext xi
-SHEBANG_FILES=	kconf_update/kwin-5.18-move-animspeed.py
+SHEBANG_FILES=	kconf_update/kwin-5.18-move-animspeed.py \
+		kconf_update/kwinrules-5.19-placement.pl
 
 post-patch:
 	${REINPLACE_CMD} '/sysmacros.h/d' \

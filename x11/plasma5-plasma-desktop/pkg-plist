@@ -898,8 +898,6 @@ share/doc/HTML/sv/kcontrol/keys/index.cache.bz2
 share/doc/HTML/sv/kcontrol/keys/index.docbook
 share/doc/HTML/sv/kcontrol/mouse/index.cache.bz2
 share/doc/HTML/sv/kcontrol/mouse/index.docbook
-share/doc/HTML/sv/kcontrol/notifications/index.cache.bz2
-share/doc/HTML/sv/kcontrol/notifications/index.docbook
 share/doc/HTML/sv/kcontrol/paths/index.cache.bz2
 share/doc/HTML/sv/kcontrol/paths/index.docbook
 share/doc/HTML/sv/kcontrol/solid-actions/index.cache.bz2
@@ -1618,6 +1616,7 @@ share/locale/cs/LC_MESSAGES/kcm_cursortheme.mo
 share/locale/cs/LC_MESSAGES/kcm_desktoppaths.mo
 share/locale/cs/LC_MESSAGES/kcm_desktoptheme.mo
 share/locale/cs/LC_MESSAGES/kcm_fonts.mo
+share/locale/cs/LC_MESSAGES/kcm_keys.mo
 share/locale/cs/LC_MESSAGES/kcm_launchfeedback.mo
 share/locale/cs/LC_MESSAGES/kcm_lookandfeel.mo
 share/locale/cs/LC_MESSAGES/kcm_nightcolor.mo

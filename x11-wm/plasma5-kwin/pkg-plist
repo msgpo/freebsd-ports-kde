@@ -332,6 +332,8 @@ share/icons/hicolor/scalable/apps/kwin.svgz
 share/kconf_update/kwin-5.16-auto-bordersize.sh
 share/kconf_update/kwin-5.18-move-animspeed.py
 share/kconf_update/kwin.upd
+share/kconf_update/kwinrules-5.19-placement.pl
+share/kconf_update/kwinrules.upd
 share/knotifications5/kwin.notifyrc
 share/knsrcfiles/aurorae.knsrc
 share/knsrcfiles/kwineffect.knsrc
