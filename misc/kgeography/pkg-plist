@@ -1024,12 +1024,8 @@ share/locale/fi/LC_MESSAGES/kgeography.mo
 share/locale/fi/LC_SCRIPTS/kgeography/kgeography.js
 share/locale/fi/LC_SCRIPTS/kgeography/kgeography.pmap
 share/locale/fi/LC_SCRIPTS/kgeography/kgeography.pmapc
-share/locale/fi/LC_SCRIPTS/kgeography/kgeography/kgeography.js
-share/locale/fi/LC_SCRIPTS/kgeography/kgeography/kgeography.pmap
-share/locale/fi/LC_SCRIPTS/kgeography/kgeography/kgeography.pmapc
 share/locale/fr/LC_MESSAGES/kgeography.mo
 share/locale/fr/LC_SCRIPTS/kgeography/kgeography.js
-share/locale/fr/LC_SCRIPTS/kgeography/kgeography/kgeography.js
 share/locale/ga/LC_MESSAGES/kgeography.mo
 share/locale/gl/LC_MESSAGES/kgeography.mo
 share/locale/he/LC_MESSAGES/kgeography.mo
@@ -1040,7 +1036,6 @@ share/locale/is/LC_MESSAGES/kgeography.mo
 share/locale/it/LC_MESSAGES/kgeography.mo
 share/locale/ja/LC_MESSAGES/kgeography.mo
 share/locale/ja/LC_SCRIPTS/kgeography/kgeography.js
-share/locale/ja/LC_SCRIPTS/kgeography/kgeography/kgeography.js
 share/locale/kk/LC_MESSAGES/kgeography.mo
 share/locale/km/LC_MESSAGES/kgeography.mo
 share/locale/ko/LC_MESSAGES/kgeography.mo
@@ -1048,7 +1043,6 @@ share/locale/lt/LC_MESSAGES/kgeography.mo
 share/locale/lv/LC_MESSAGES/kgeography.mo
 share/locale/ml/LC_MESSAGES/kgeography.mo
 share/locale/ml/LC_SCRIPTS/kgeography/kgeography.js
-share/locale/ml/LC_SCRIPTS/kgeography/kgeography/kgeography.js
 share/locale/mr/LC_MESSAGES/kgeography.mo
 share/locale/nb/LC_MESSAGES/kgeography.mo
 share/locale/nds/LC_MESSAGES/kgeography.mo
@@ -1059,9 +1053,6 @@ share/locale/pl/LC_MESSAGES/kgeography.mo
 share/locale/pl/LC_SCRIPTS/kgeography/general.pmap
 share/locale/pl/LC_SCRIPTS/kgeography/general.pmapc
 share/locale/pl/LC_SCRIPTS/kgeography/kgeography.js
-share/locale/pl/LC_SCRIPTS/kgeography/kgeography/general.pmap
-share/locale/pl/LC_SCRIPTS/kgeography/kgeography/general.pmapc
-share/locale/pl/LC_SCRIPTS/kgeography/kgeography/kgeography.js
 share/locale/pt/LC_MESSAGES/kgeography.mo
 share/locale/pt_BR/LC_MESSAGES/kgeography.mo
 share/locale/ro/LC_MESSAGES/kgeography.mo
@@ -1075,9 +1066,6 @@ share/locale/uk/LC_MESSAGES/kgeography.mo
 share/locale/uk/LC_SCRIPTS/kgeography/general.pmap
 share/locale/uk/LC_SCRIPTS/kgeography/general.pmapc
 share/locale/uk/LC_SCRIPTS/kgeography/kgeography.js
-share/locale/uk/LC_SCRIPTS/kgeography/kgeography/general.pmap
-share/locale/uk/LC_SCRIPTS/kgeography/kgeography/general.pmapc
-share/locale/uk/LC_SCRIPTS/kgeography/kgeography/kgeography.js
 share/locale/zh_CN/LC_MESSAGES/kgeography.mo
 share/locale/zh_TW/LC_MESSAGES/kgeography.mo
 share/metainfo/org.kde.kgeography.appdata.xml
