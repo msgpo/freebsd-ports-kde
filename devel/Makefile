@@ -1188,6 +1188,7 @@
     SUBDIR += libglade2
     SUBDIR += libglade2-reference
     SUBDIR += libglademm24
+    SUBDIR += libgnt
     SUBDIR += libgpc
     SUBDIR += libgpkg
     SUBDIR += libgrading
@@ -4651,6 +4652,7 @@
     SUBDIR += py-nbconvert
     SUBDIR += py-nbdime
     SUBDIR += py-nbformat
+    SUBDIR += py-node-semver
     SUBDIR += py-nodeenv
     SUBDIR += py-nose
     SUBDIR += py-nose-cov
@@ -4741,6 +4743,7 @@
     SUBDIR += py-parver
     SUBDIR += py-pastel
     SUBDIR += py-patch
+    SUBDIR += py-patch-ng
     SUBDIR += py-path.py
     SUBDIR += py-pathlib
     SUBDIR += py-pathlib2

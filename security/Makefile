@@ -717,7 +717,6 @@
     SUBDIR += pam_mkhomedir
     SUBDIR += pam_ocra
     SUBDIR += pam_p11
-    SUBDIR += pam_pseudo
     SUBDIR += pam_pwdfile
     SUBDIR += pam_require
     SUBDIR += pam_script
@@ -1288,6 +1287,7 @@
     SUBDIR += ykpers
     SUBDIR += ylva
     SUBDIR += yubico-piv-tool
+    SUBDIR += yubikey-agent
     SUBDIR += yubikey-manager-qt
     SUBDIR += yubikey-personalization-gui
     SUBDIR += yubioath-desktop

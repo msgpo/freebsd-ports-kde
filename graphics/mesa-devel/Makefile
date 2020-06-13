@@ -1,8 +1,8 @@
 # $FreeBSD$
 
 PORTNAME=	mesa
-DISTVERSION=	20.1-branchpoint-1550
-DISTVERSIONSUFFIX=	-gd1f9d1e26a2
+DISTVERSION=	20.1-branchpoint-1696
+DISTVERSIONSUFFIX=	-g67ad75a282d
 CATEGORIES=	graphics
 PKGNAMESUFFIX=	-devel
 
@@ -52,21 +52,19 @@ SHEBANG_FILES=	src/vulkan/overlay-layer/${PORTNAME}-overlay-control.py
 PLATFORMS=	${PORT_OPTIONS:MX11:tl} ${PORT_OPTIONS:MWAYLAND:tl} drm surfaceless
 MESON_ARGS=	-Dgallium-omx=disabled \
 		-Dgallium-opencl=disabled \
-		-Dgallium-xa=false \
-		-Dgallium-xvmc=false \
+		-Dgallium-xa=disabled \
+		-Dgallium-xvmc=disabled \
 		-Dplatforms=${PLATFORMS:ts,} \
-		${PKGNAMESUFFIX:S/^/-Degl-lib-suffix=/} \
+		${BINARY_ALIAS:D--native-file=binary_alias.ini} \
 		${NULL}
-SUB_FILES=	libmap.conf
-SUB_LIST=	PKGNAMESUFFIX=${PKGNAMESUFFIX}
-PLIST_SUB=	ARCH=${ARCH:S/amd/x86_/} PKGNAMESUFFIX=${PKGNAMESUFFIX}
+PLIST_SUB=	ARCH=${ARCH:S/amd/x86_/}
 
 .if exists(/usr/bin/ld.lld) && ${/usr/bin/ld:L:tA} != /usr/bin/ld.lld
 # --build-id isn't supported by old GNU ld.bfd in base
 LDFLAGS+=	-fuse-ld=lld
 .endif
 
-OPTIONS_DEFINE=		${OPTIONS_MULTI} LIBUNWIND LLVM VAAPI VDPAU WAYLAND X11 ZSTD
+OPTIONS_DEFINE=		${OPTIONS_MULTI} LIBUNWIND LLVM NLS VAAPI VDPAU WAYLAND X11 ZSTD
 OPTIONS_DEFAULT=	${OPTIONS_MULTI} LIBUNWIND LLVM VAAPI VDPAU WAYLAND X11 ZSTD
 OPTIONS_MULTI=		DRI GALLIUM VULKAN
 OPTIONS_MULTI_DRI=	i965
@@ -75,6 +73,10 @@ OPTIONS_MULTI_VULKAN=	anv radv
 OPTIONS_EXCLUDE_DragonFly=	LIBUNWIND anv
 OPTIONS_EXCLUDE+=	${ARCH:Namd64:Ni386:C/.+/anv i965 iris/}
 OPTIONS_EXCLUDE+=	${ARCH:Naarch64:Namd64:Ni386:C/.+/LIBUNWIND/}
+OPTIONS_EXCLUDE+=	${"${GL_DEFAULT:S/,/ /g:[-1]}"==${.CURDIR:T}:?COINST:}
+OPTIONS_EXCLUDE+=	${"${GL_DEFAULT:S/,/ /g:[1]}"!=libglvnd:?GLVND:}
+OPTIONS_SLAVE+=		${"${GL_DEFAULT:S/,/ /g:[-1]}"!=${.CURDIR:T}:?COINST:}
+OPTIONS_SLAVE+=		${"${GL_DEFAULT:S/,/ /g:[1]}"==libglvnd:?GLVND:}
 OPTIONS_SUB=		yes
 
 # Convert options to -D<type>-drivers=<driver1,driver2,etc>
@@ -94,6 +96,17 @@ iris_DESC=		Broadwell and newer
 r600_DESC=		R600, R700, Evergreen, Northern Islands
 radeonsi_DESC=		Southern Islands and newer
 
+COINST_DESC=		Allow co-installation with another Mesa port
+COINST_MESON_ON=	-Degl-lib-suffix=${PKGNAMESUFFIX}
+COINST_PLIST_SUB=	SUFFIX=${PKGNAMESUFFIX}
+COINST_SUB_FILES=	libmap.conf
+COINST_SUB_LIST=	SUFFIX=${PKGNAMESUFFIX}
+COINST_PLIST_SUB_OFF=	SUFFIX=
+
+GLVND_DESC=		GL Vendor-Neutral Dispatch support
+GLVND_BUILD_DEPENDS=	libglvnd>0:graphics/libglvnd
+GLVND_MESON_TRUE=	glvnd
+
 LIBUNWIND_DESC=		Use libunwind for stacktraces
 LIBUNWIND_LIB_DEPENDS=	libunwind.so:devel/libunwind
 LIBUNWIND_MESON_ENABLED=	libunwind
@@ -105,6 +118,8 @@ LLVM_BINARY_ALIAS=	llvm-config=llvm-config${LLVM_DEFAULT}
 .for i in r600 radeonsi radv
 ${i}_IMPLIES+=		LLVM
 .endfor
+
+NLS_USES=		gettext-tools
 
 VAAPI_BUILD_DEPENDS=	libva>0:multimedia/libva
 VAAPI_MESON_ENABLED=	gallium-va
@@ -129,21 +144,30 @@ ZSTD_DESC=		Use ZSTD for shader cache
 ZSTD_LIB_DEPENDS=	libzstd.so:archivers/zstd
 ZSTD_MESON_ENABLED=	zstd
 
+post-extract:
+# Work around Meson lookup order e.g., llvm-config
+.if defined(BINARY_ALIAS)
+	@${ECHO_CMD} '[binaries]' >${WRKSRC}/binary_alias.ini
+	@for f in ${BINARY_ALIAS}; do \
+		${ECHO_CMD} "$${f%%=*} = '$${f#*=}'"; \
+	done >>${WRKSRC}/binary_alias.ini
+.endif
+
 post-patch:
 # Extract (snapshot) version from the port instead of empty string
 	@${REINPLACE_CMD} '/MESA_GIT_SHA1/s/""/" (git-${DISTVERSIONSUFFIX:C/.*-g//})"/' \
 		${WRKSRC}/bin/git_sha1_gen.py
-.if defined(PKGNAMESUFFIX)
-	@${MV} ${WRKSRC}/src/egl/main/50_${PORTNAME}.json \
-		${WRKSRC}/src/egl/main/50_${PKGBASE}.json
+
+post-patch-COINST-on:
 	@${MV} ${WRKSRC}/src/util/00-${PORTNAME}-defaults.conf \
 		${WRKSRC}/src/util/00-${PKGBASE}-defaults.conf
-.endif
 
-post-install:
-.if defined(PKGNAMESUFFIX)
+pre-build-NLS-on:
+# Meson doesn't automatically generate translations
+	@${DO_MAKE_BUILD} -C ${BUILD_WRKSRC} xmlpool-gmo
+
+post-install-COINST-on:
 	@${INSTALL_DATA} ${WRKDIR}/libmap.conf \
 		${STAGEDIR}${PREFIX}/etc/libmap.d/${PKGBASE}.conf.sample
-.endif
 
 .include <bsd.port.mk>
