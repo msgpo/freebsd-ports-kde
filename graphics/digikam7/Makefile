@@ -1,7 +1,7 @@
 # $FreeBSD: head/graphics/digikam/Makefile 519824 2019-12-11 17:53:48Z jbeich $
 
 PORTNAME=	digikam
-DISTVERSION=	7.0.0-beta3
+DISTVERSION=	7.0.0-rc
 PORTREVISION=	0
 CATEGORIES=	graphics kde
 MASTER_SITES=	KDE/unstable/${PORTNAME}
@@ -101,6 +101,6 @@ WEBENGINE_USE=		QT=webengine
 WEBENGINE_USE_OFF=	QT=webkit
 WEBENGINE_CMAKE_BOOL=	ENABLE_QWEBENGINE
 
-PLIST_SUB=		SHLIB_VER=${DISTVERSION:S/-beta3//}
+PLIST_SUB=		SHLIB_VER=${DISTVERSION:S/-rc//}
 
 .include <bsd.port.mk>

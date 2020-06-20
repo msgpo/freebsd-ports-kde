@@ -19,6 +19,7 @@ include/digikam/dcolor.h
 include/digikam/dcolorblend.h
 include/digikam/dcolorcomposer.h
 include/digikam/dcolorpixelaccess.h
+include/digikam/dcolorselector.h
 include/digikam/dhistoryview.h
 include/digikam/digikam_config.h
 include/digikam/digikam_core_export.h
@@ -37,6 +38,7 @@ include/digikam/ditemslist.h
 include/digikam/dmessagebox.h
 include/digikam/dmetainfoiface.h
 include/digikam/dplugin.h
+include/digikam/dpluginaboutdlg.h
 include/digikam/dpluginaction.h
 include/digikam/dpluginauthor.h
 include/digikam/dpluginbqm.h
@@ -54,6 +56,7 @@ include/digikam/drawinfo.h
 include/digikam/dsavesettingswidget.h
 include/digikam/dwizarddlg.h
 include/digikam/dwizardpage.h
+include/digikam/dynamicthread.h
 include/digikam/editortool.h
 include/digikam/filesaveconflictbox.h
 include/digikam/filteraction.h
@@ -66,6 +69,7 @@ include/digikam/graphicsdimgview.h
 include/digikam/historyimageid.h
 include/digikam/iccprofile.h
 include/digikam/icctransform.h
+include/digikam/imagedialog.h
 include/digikam/imageiface.h
 include/digikam/imageregionwidget.h
 include/digikam/imagezoomsettings.h
@@ -73,6 +77,8 @@ include/digikam/iofilesettings.h
 include/digikam/iteminfo.h
 include/digikam/iteminfolist.h
 include/digikam/loadingdescription.h
+include/digikam/loadsavethread.h
+include/digikam/managedloadsavethread.h
 include/digikam/metaengine.h
 include/digikam/metaengine_data.h
 include/digikam/photoinfocontainer.h
@@ -82,6 +88,7 @@ include/digikam/previewtoolbar.h
 include/digikam/queuesettings.h
 include/digikam/rginfo.h
 include/digikam/thumbnailinfo.h
+include/digikam/thumbnailloadthread.h
 include/digikam/wbcontainer.h
 lib/cmake/DigikamCore/DigikamCoreConfig-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/DigikamCore/DigikamCoreConfig.cmake
@@ -92,6 +99,7 @@ lib/cmake/DigikamDatabase/DigikamDatabaseConfigVersion.cmake
 lib/cmake/DigikamGui/DigikamGuiConfig-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/DigikamGui/DigikamGuiConfig.cmake
 lib/cmake/DigikamGui/DigikamGuiConfigVersion.cmake
+lib/cmake/DigikamPlugin/DigikamPluginConfig.cmake
 lib/libdigikamcore.so
 lib/libdigikamcore.so.%%SHLIB_VER%%
 lib/libdigikamdatabase.so
