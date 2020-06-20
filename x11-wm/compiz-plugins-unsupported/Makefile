@@ -3,16 +3,13 @@
 
 PORTNAME=	compiz-plugins-unsupported
 PORTVERSION=	0.8.8
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	x11-wm
-MASTER_SITES=	http://releases.compiz.org/${PORTVERSION}/
+MASTER_SITES=	http://releases.compiz.org/${PORTVERSION}/ \
+		https://BSDforge.com/prolects/source/x11-wm/compiz-plugins-unsupported/
 
-MAINTAINER=	freebsd-ports@dan.me.uk
+MAINTAINER=	portmaster@BSDforge.com
 COMMENT=	Plugins for Compiz Composite Window Manager
-
-BROKEN=		unfetchable
-DEPRECATED=	Broken for more than 6 months
-EXPIRATION_DATE=	2020-05-05
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING

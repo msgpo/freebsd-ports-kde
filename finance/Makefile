@@ -24,8 +24,6 @@
     SUBDIR += aqbanking
     SUBDIR += beancount
     SUBDIR += beanie
-    SUBDIR += bitcoinnodestats
-    SUBDIR += cbb
     SUBDIR += cointop
     SUBDIR += electrum
     SUBDIR += expense
@@ -46,6 +44,7 @@
     SUBDIR += libstocks
     SUBDIR += moneymanagerex
     SUBDIR += myphpmoney
+    SUBDIR += odoo
     SUBDIR += p5-Business-CreditCard
     SUBDIR += p5-Business-MaxMind-CreditCardFraudDetection
     SUBDIR += p5-Business-OCV

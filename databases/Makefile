@@ -23,6 +23,7 @@
     SUBDIR += apq-pgsql
     SUBDIR += arangodb32
     SUBDIR += arangodb33
+    SUBDIR += arrow
     SUBDIR += ateam_mysql_ldap_auth
     SUBDIR += autobackupmysql
     SUBDIR += automysqlbackup
@@ -41,6 +42,7 @@
     SUBDIR += clickhouse
     SUBDIR += cockroach
     SUBDIR += couchdb2
+    SUBDIR += couchdb3
     SUBDIR += courier-authlib-mysql
     SUBDIR += courier-authlib-pgsql
     SUBDIR += courier-authlib-userdb
@@ -50,7 +52,6 @@
     SUBDIR += dalmp
     SUBDIR += datamodeler
     SUBDIR += db
-    SUBDIR += db48
     SUBDIR += db5
     SUBDIR += db6
     SUBDIR += dbf
@@ -62,7 +63,6 @@
     SUBDIR += elixir-calecto
     SUBDIR += elixir-db_connection
     SUBDIR += elixir-ecto
-    SUBDIR += elixir-exredis
     SUBDIR += elixir-geo
     SUBDIR += elixir-mariaex
     SUBDIR += elixir-mongo
@@ -104,7 +104,6 @@
     SUBDIR += gom
     SUBDIR += gqlplus
     SUBDIR += grass7
-    SUBDIR += hamsterdb
     SUBDIR += hashtypes
     SUBDIR += hbase
     SUBDIR += hiredis
@@ -186,19 +185,18 @@
     SUBDIR += mdbtools
     SUBDIR += mdcached
     SUBDIR += memcached
-    SUBDIR += memcacheq
     SUBDIR += mongodb36
     SUBDIR += mongodb36-tools
     SUBDIR += mongodb40
     SUBDIR += mongodb40-tools
+    SUBDIR += mongodb42
+    SUBDIR += mongodb42-tools
     SUBDIR += mroonga
     SUBDIR += mtools-mongodb
     SUBDIR += mtop
     SUBDIR += mydbf2mysql
     SUBDIR += mydumper
     SUBDIR += mysac
-    SUBDIR += mysql++1
-    SUBDIR += mysql++3
     SUBDIR += mysql-connector-c
     SUBDIR += mysql-connector-c++
     SUBDIR += mysql-connector-java
@@ -206,7 +204,6 @@
     SUBDIR += mysql-connector-odbc
     SUBDIR += mysql-q4m
     SUBDIR += mysql-udf
-    SUBDIR += mysql2odbc
     SUBDIR += mysql2pgsql
     SUBDIR += mysql55-client
     SUBDIR += mysql55-server
@@ -219,7 +216,6 @@
     SUBDIR += mysqlbackup
     SUBDIR += mysqlbigram
     SUBDIR += mysqldump-secure
-    SUBDIR += mysqlidxchk
     SUBDIR += mysqlreport
     SUBDIR += mysqlsla
     SUBDIR += mysqlsniffer
@@ -379,7 +375,6 @@
     SUBDIR += p5-DBIx-DBSchema
     SUBDIR += p5-DBIx-DataSource
     SUBDIR += p5-DBIx-Dump
-    SUBDIR += p5-DBIx-Ease
     SUBDIR += p5-DBIx-HA
     SUBDIR += p5-DBIx-Handler
     SUBDIR += p5-DBIx-Inspector
@@ -413,7 +408,6 @@
     SUBDIR += p5-DBIx-XHTML_Table
     SUBDIR += p5-DBIx-XML_RDB
     SUBDIR += p5-DBM-Deep
-    SUBDIR += p5-DMOZ-ParseRDF
     SUBDIR += p5-DR-Tarantool
     SUBDIR += p5-DWH_File
     SUBDIR += p5-Dancer-Plugin-DBIC
@@ -527,7 +521,6 @@
     SUBDIR += pear-DB_ldap2
     SUBDIR += pear-DoctrineCommon
     SUBDIR += pear-DoctrineDBAL
-    SUBDIR += pear-DoctrineORM
     SUBDIR += pear-Horde_Db
     SUBDIR += pear-Horde_HashTable
     SUBDIR += pear-Horde_Imsp
@@ -535,7 +528,6 @@
     SUBDIR += pear-Horde_Mongo
     SUBDIR += pear-MDB
     SUBDIR += pear-MDB2
-    SUBDIR += pear-MDB2_Driver_mysql
     SUBDIR += pear-MDB2_Driver_mysqli
     SUBDIR += pear-MDB2_Driver_pgsql
     SUBDIR += pear-MDB2_Schema
@@ -543,10 +535,6 @@
     SUBDIR += pear-Structures_DataGrid_DataSource_Array
     SUBDIR += pear-Structures_DataGrid_DataSource_CSV
     SUBDIR += pear-Structures_DataGrid_DataSource_DB
-    SUBDIR += pear-Structures_DataGrid_DataSource_DBQuery
-    SUBDIR += pear-Structures_DataGrid_DataSource_DBTable
-    SUBDIR += pear-Structures_DataGrid_DataSource_DataObject
-    SUBDIR += pear-Structures_DataGrid_DataSource_MDB2
     SUBDIR += pear-Structures_DataGrid_DataSource_PDO
     SUBDIR += pear-XML_Query2XML
     SUBDIR += pecl-cassandra
@@ -570,6 +558,7 @@
     SUBDIR += pg_activity
     SUBDIR += pg_citus
     SUBDIR += pg_dirtyread
+    SUBDIR += pg_ed25519
     SUBDIR += pg_partman
     SUBDIR += pg_qualstats
     SUBDIR += pg_reorg
@@ -578,7 +567,6 @@
     SUBDIR += pg_stat_kcache
     SUBDIR += pgaccess
     SUBDIR += pgadmin3
-    SUBDIR += pgagent
     SUBDIR += pgbadger
     SUBDIR += pgbarman
     SUBDIR += pgbouncer
@@ -806,6 +794,7 @@
     SUBDIR += py-pycql
     SUBDIR += py-pyhs
     SUBDIR += py-pylibmc
+    SUBDIR += py-pymemcache
     SUBDIR += py-pymssql
     SUBDIR += py-pymysql
     SUBDIR += py-pyodbc
@@ -841,6 +830,7 @@
     SUBDIR += py-tableschema
     SUBDIR += py-tarantool
     SUBDIR += py-tiledb
+    SUBDIR += py-txredisapi
     SUBDIR += py-umemcache
     SUBDIR += py-unqlite
     SUBDIR += py-varstack
@@ -960,8 +950,6 @@
     SUBDIR += rubygem-mysql204
     SUBDIR += rubygem-openid-redis-store
     SUBDIR += rubygem-paranoia
-    SUBDIR += rubygem-peek-mysql2-rails5
-    SUBDIR += rubygem-peek-pg-rails5
     SUBDIR += rubygem-pg
     SUBDIR += rubygem-pg0
     SUBDIR += rubygem-pg018
@@ -1032,7 +1020,6 @@
     SUBDIR += tuning-primer
     SUBDIR += twemproxy
     SUBDIR += unixODBC
-    SUBDIR += useracc
     SUBDIR += usql
     SUBDIR += vfront
     SUBDIR += virtualpg

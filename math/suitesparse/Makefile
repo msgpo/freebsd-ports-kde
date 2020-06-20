@@ -3,11 +3,12 @@
 
 PORTNAME=	suitesparse
 PORTVERSION=	5.7.2
+PORTREVISION=	1
 DISTVERSIONPREFIX=	v
 CATEGORIES=	math
 
 MAINTAINER=	fortran@FreeBSD.org
-COMMENT=	SuiteSparse is a set of packages for sparse matrices calculation
+COMMENT=	Set of packages for sparse matrix calculation
 
 LICENSE=	GPLv2 LGPL21
 LICENSE_COMB=	dual

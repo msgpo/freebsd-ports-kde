@@ -3,7 +3,7 @@
 
 PORTNAME=	graphviz
 PORTVERSION=	2.44.0
-PORTREVISION=	1
+PORTREVISION=	4
 CATEGORIES=	graphics tk
 MASTER_SITES=	https://www2.graphviz.org/Packages/stable/portable_source/
 
@@ -22,7 +22,7 @@ LIB_DEPENDS=	libltdl.so:devel/libltdl \
 		libexpat.so:textproc/expat2 \
 		libgd.so:${GD_PORT}
 
-USES=		cpe pathfix shebangfix gmake bison groff pkgconfig \
+USES=		cpe pathfix shebangfix gmake bison pkgconfig \
 		libtool:keepla autoreconf localbase:ldflags jpeg \
 		tcl:build
 
@@ -99,7 +99,7 @@ RUBY_USE=	RUBY=yes
 LUA_USES=	lua
 TK_USES=	tk:build
 GO_USES=	go:no_targets
-DOCS_USES=	ghostscript:build
+DOCS_USES=	ghostscript:build groff
 
 POPPLER_LIB_DEPENDS=	libpoppler-glib.so:graphics/poppler-glib
 ANN_LIB_DEPENDS=	libann.so:math/ann
@@ -204,10 +204,10 @@ CONFIGURE_ARGS+=	--without-libiconv-prefix
 .if ${PORT_OPTIONS:MPERL} || ${PORT_OPTIONS:MPHP} || ${PORT_OPTIONS:MPYTHON} || \
     ${PORT_OPTIONS:MRUBY} || ${PORT_OPTIONS:MLUA} || ${PORT_OPTIONS:MTCL} || \
     ${PORT_OPTIONS:MGUILE} || ${PORT_OPTIONS:MGO}
-BUILD_DEPENDS+=		swig3.0:devel/swig30
-RUN_DEPENDS+=		swig3.0:devel/swig30
+BUILD_DEPENDS+=		swig:devel/swig
+RUN_DEPENDS+=		swig:devel/swig
 CONFIGURE_ARGS+=	--enable-swig
-CONFIGURE_ENV+=		SWIG="${LOCALBASE}/bin/swig3.0"
+CONFIGURE_ENV+=		SWIG="${LOCALBASE}/bin/swig"
 .else
 CONFIGURE_ARGS+=	--disable-swig
 CONFIGURE_ENV+=		SWIG="/nonexistent"

@@ -22,7 +22,6 @@
     SUBDIR += abuse_sdl
     SUBDIR += ace-of-penguins
     SUBDIR += acm
-    SUBDIR += adom
     SUBDIR += adonthell
     SUBDIR += adonthell-wastesedge
     SUBDIR += aestats
@@ -115,14 +114,12 @@
     SUBDIR += brutalchess
     SUBDIR += bs
     SUBDIR += bsdgames
-    SUBDIR += bsdrain
     SUBDIR += bsdtris
     SUBDIR += bsp
     SUBDIR += bstone
     SUBDIR += bugsquish
     SUBDIR += bugsx
     SUBDIR += bumprace
-    SUBDIR += bunnysay
     SUBDIR += burgerspace
     SUBDIR += burrtools
     SUBDIR += bygfoot
@@ -131,11 +128,12 @@
     SUBDIR += cake
     SUBDIR += caph
     SUBDIR += cardpics
-    SUBDIR += castlevox
     SUBDIR += cataclysm-dda
+    SUBDIR += cataclysm-dda-tiles
     SUBDIR += catesc
     SUBDIR += cave9
     SUBDIR += cavezofphear
+    SUBDIR += cdogs-sdl
     SUBDIR += cgoban
     SUBDIR += chapping
     SUBDIR += chessx
@@ -320,7 +318,6 @@
     SUBDIR += gltron
     SUBDIR += gmastermind
     SUBDIR += gmines
-    SUBDIR += gnarr
     SUBDIR += gnome-2048
     SUBDIR += gnome-chess
     SUBDIR += gnome-games
@@ -377,8 +374,6 @@
     SUBDIR += hinversi
     SUBDIR += hitori
     SUBDIR += hllib
-    SUBDIR += hohlin
-    SUBDIR += hoichess
     SUBDIR += holotz-castle
     SUBDIR += homura
     SUBDIR += hoverboard-sdl
@@ -416,7 +411,6 @@
     SUBDIR += jutils
     SUBDIR += jvgs
     SUBDIR += jzip
-    SUBDIR += kajaani-kombat
     SUBDIR += kanagram
     SUBDIR += kapman
     SUBDIR += kartofel
@@ -493,12 +487,15 @@
     SUBDIR += libretro-beetle_vb
     SUBDIR += libretro-beetle_wswan
     SUBDIR += libretro-bluemsx
+    SUBDIR += libretro-cap32
     SUBDIR += libretro-core-info
     SUBDIR += libretro-desmume2015
     SUBDIR += libretro-dosbox
     SUBDIR += libretro-emux
     SUBDIR += libretro-fbalpha
+    SUBDIR += libretro-fbneo
     SUBDIR += libretro-fceumm
+    SUBDIR += libretro-fmsx
     SUBDIR += libretro-fuse
     SUBDIR += libretro-gambatte
     SUBDIR += libretro-genesis_plus_gx
@@ -510,10 +507,12 @@
     SUBDIR += libretro-mame2003
     SUBDIR += libretro-mame2003_plus
     SUBDIR += libretro-mgba
+    SUBDIR += libretro-mu
     SUBDIR += libretro-nestopia
     SUBDIR += libretro-nxengine
     SUBDIR += libretro-o2em
     SUBDIR += libretro-opera
+    SUBDIR += libretro-paralleln64
     SUBDIR += libretro-pcsx_rearmed
     SUBDIR += libretro-picodrive
     SUBDIR += libretro-prboom
@@ -532,6 +531,7 @@
     SUBDIR += libretro-vbanext
     SUBDIR += libretro-vecx
     SUBDIR += libretro-virtualjaguar
+    SUBDIR += libretro-yabause
     SUBDIR += libshhcards
     SUBDIR += libtmcg
     SUBDIR += lightsoff
@@ -545,9 +545,6 @@
     SUBDIR += linux-dwarffortress
     SUBDIR += linux-enemyterritory
     SUBDIR += linux-enemyterritory-jaymod
-    SUBDIR += linux-enemyterritory-jaymod-21
-    SUBDIR += linux-enemyterritory-omni-bot
-    SUBDIR += linux-enemyterritory-omni-bot-0660
     SUBDIR += linux-enemyterritory-shrub
     SUBDIR += linux-enemyterritory-tce
     SUBDIR += linux-etqw-demo-server
@@ -626,7 +623,6 @@
     SUBDIR += multimc
     SUBDIR += mvdsv
     SUBDIR += nInvaders
-    SUBDIR += nadar
     SUBDIR += naev
     SUBDIR += naev-data
     SUBDIR += narcissu2
@@ -666,7 +662,6 @@
     SUBDIR += odamex
     SUBDIR += oldrunner
     SUBDIR += omega
-    SUBDIR += oneko
     SUBDIR += oneko-sakura
     SUBDIR += onscripter
     SUBDIR += onscripter-1byte
@@ -871,7 +866,6 @@
     SUBDIR += sdlsand
     SUBDIR += sea-defender
     SUBDIR += seabattle
-    SUBDIR += seahaven
     SUBDIR += searchandrescue
     SUBDIR += searchandrescue-data
     SUBDIR += senken
@@ -917,7 +911,6 @@
     SUBDIR += stransball2
     SUBDIR += stratagus
     SUBDIR += stuntrally
-    SUBDIR += sudoku_solver
     SUBDIR += sudsol
     SUBDIR += super_methane_brothers
     SUBDIR += supertux
@@ -939,7 +932,6 @@
     SUBDIR += tesseract-data
     SUBDIR += tetrinet
     SUBDIR += tetrinet-x
-    SUBDIR += tetrons
     SUBDIR += tetzle
     SUBDIR += textmaze
     SUBDIR += thegrind
@@ -1101,7 +1093,6 @@
     SUBDIR += xosmulti
     SUBDIR += xpanex
     SUBDIR += xpat2
-    SUBDIR += xpenguins
     SUBDIR += xpilot
     SUBDIR += xpilot-ng-server
     SUBDIR += xpipeman
@@ -1138,8 +1129,6 @@
     SUBDIR += xtruco
     SUBDIR += xtux
     SUBDIR += xvier
-    SUBDIR += xvmahjongg
-    SUBDIR += xvmines
     SUBDIR += xworm
     SUBDIR += xye
     SUBDIR += xzip

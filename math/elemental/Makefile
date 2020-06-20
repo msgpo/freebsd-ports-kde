@@ -3,12 +3,16 @@
 PORTNAME=	elemental
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.87.7
+PORTREVISION=	1
 CATEGORIES=	math
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Dense and sparse linear algebra, conic optimization, lattice reduction
 
 LICENSE=	BSD2CLAUSE
+
+BROKEN_FreeBSD_12_powerpc64=	fails to compile: include/El/blas_like/level1/Copy.hpp:522:27: ambiguous template specialization 'Copy<>' for 'void El::Copy(const El::Matrix<int>&, El::Matrix<int>&)'
+BROKEN_i386=	clang crashes: https://bugs.llvm.org/show_bug.cgi?id=46026
 
 LIB_DEPENDS=	libgmp.so:math/gmp \
 		libmetis.so:math/metis \

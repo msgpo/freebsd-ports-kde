@@ -2,8 +2,7 @@
 
 PORTNAME=	ntpsec
 DISTVERSIONPREFIX=	NTPsec_
-DISTVERSION=	1_1_8
-PORTREVISION=	2
+DISTVERSION=	1_1_9
 CATEGORIES=	net
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -17,6 +16,8 @@ LIB_DEPENDS=	libdns_sd.so:net/mDNSResponder
 USES=		bison gettext-runtime pkgconfig python shebangfix ssl waf
 SHEBANG_FILES=	${WRKSRC}/ntpclients/ntp*.py
 USE_GITHUB=	yes
+
+CONFLICTS=	ntp ntp-devel openntpd
 
 MAKE_ENV=	NOSYNC=1 # workaround for the console problem: https://gitlab.com/NTPsec/ntpsec/issues/599
 

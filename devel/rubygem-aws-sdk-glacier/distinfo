@@ -1,3 +1,3 @@
-TIMESTAMP = 1585076316
-SHA256 (rubygem/aws-sdk-glacier-1.27.0.gem) = c8ed24889d7f729c7cf7220ffef7c406ac31221d46d9c55443eaef9cdb858326
-SIZE (rubygem/aws-sdk-glacier-1.27.0.gem) = 65024
+TIMESTAMP = 1592145363
+SHA256 (rubygem/aws-sdk-glacier-1.30.1.gem) = 2bdd6250e1c506ccbff00367419b185eaed42debf1e79cdd8ada9dd980669737
+SIZE (rubygem/aws-sdk-glacier-1.30.1.gem) = 66048

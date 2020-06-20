@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	code_saturne
-PORTVERSION=	6.1.0
+PORTVERSION=	6.1.1
 DISTVERSIONPREFIX=	v
 CATEGORIES=	science parallel
 
@@ -24,7 +24,6 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}matplotlib>0:math/py-matplotlib@${PY_FLAVOR}
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	code-saturne
-GH_TAGNAME=	89e7bbf	# Some fixes are needed for atmospheric aerosols
 
 USES=		autoreconf bison fortran gettext gnome gmake iconv libtool	\
 		pyqt:5 python:3.6+ shebangfix
@@ -42,8 +41,8 @@ BINARY_ALIAS=	python=${PYTHON_CMD} \
 		pyrcc5=pyrcc5-${PYTHON_VER} \
 		pyuic5=pyuic5-${PYTHON_VER}
 
-OPTIONS_DEFINE=		DOCS EXAMPLES BATCH BLAS MPI
-OPTIONS_DEFAULT=	BATCH BLAS MPI METIS
+OPTIONS_DEFINE=		DOCS EXAMPLES BATCH BLAS MPI SCOTCH
+OPTIONS_DEFAULT=	BATCH BLAS MPI SCOTCH METIS
 OPTIONS_RADIO=		METIS
 OPTIONS_RADIO_METIS=	METIS PARMETIS
 BLAS_DESC=		Support of OpenBLAS
@@ -62,6 +61,9 @@ PARMETIS_LIB_DEPENDS=	libparmetis.so:math/parmetis
 PARMETIS_CONFIGURE_ON=	--with-metis-include="${LOCALBASE}/include/parmetis"	\
 			--with-metis-lib="${LOCALBASE}/lib/parmetis"
 PARMETIS_CONFIGURE_ENV=	LIBS=-lexecinfo
+SCOTCH_DESC=		Support of Scotch
+SCOTCH_BUILD_DEPENDS=	scotch>0:cad/scotch
+SCOTCH_CONFIGURE_ON=	--with-scotch-include="${LOCALBASE}/include"
 
 TEST_TARGET=	check
 
@@ -85,7 +87,7 @@ USE_TEX=	tex:build
 BUILD_DEPENDS+=	fig2dev:print/transfig		\
 		doxygen:devel/doxygen		\
 		dot:graphics/graphviz		\
-		sphinx-build-${PYTHON_VER}:textproc/py-sphinx@${PY_FLAVOR}
+		${PY_SPHINX}
 BINARY_ALIAS+=	sphinx-build=sphinx-build-${PYTHON_VER}
 ALL_TARGET=	all pdf
 DOCS=		AUTHORS ChangeLog README

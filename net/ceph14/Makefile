@@ -3,7 +3,7 @@
 
 PORTNAME=	ceph
 DISTVERSIONPREFIX=	v
-DISTVERSION=	14.2.8
+DISTVERSION=	14.2.9
 PORTREVISION=	0
 CATEGORIES=	net
 PKGNAMESUFFIX=	14
@@ -22,7 +22,7 @@ BUILD_DEPENDS=	\
 	git:devel/git \
 	gperf:devel/gperf \
 	yasm:devel/yasm \
-	${PYTHON_PKGNAMEPREFIX}sphinx>0:textproc/py-sphinx@${PY_FLAVOR} \
+	${PY_SPHINX} \
 	${LOCALBASE}/lib/libatomic_ops.a:devel/libatomic_ops \
 	${LOCALBASE}/bin/ld:devel/binutils
 LIB_DEPENDS=	\

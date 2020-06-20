@@ -7,12 +7,8 @@ PORTREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	http://romain.blogreen.org/distfiles/
 
-MAINTAINER=	mono@FreeBSD.org
+MAINTAINER=	fox@FreeBSD.org
 COMMENT=	C\# client library for notification-daemon
-
-BROKEN=		unfetchable
-DEPRECATED=	Broken for more than 6 months
-EXPIRATION_DATE=	2020-05-05
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/ndesk-dbus-glib-1.0.pc:devel/ndesk-dbus-glib
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/ndesk-dbus-glib-1.0.pc:devel/ndesk-dbus-glib \

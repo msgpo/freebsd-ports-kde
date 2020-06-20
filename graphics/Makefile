@@ -5,7 +5,6 @@
 
     SUBDIR += 4va
     SUBDIR += Coin
-    SUBDIR += EZWGL
     SUBDIR += GraphicsMagick
     SUBDIR += Hermes
     SUBDIR += IPA
@@ -394,7 +393,6 @@
     SUBDIR += kimageannotator
     SUBDIR += kimagemapeditor
     SUBDIR += kipi-plugins
-    SUBDIR += kix-kmod
     SUBDIR += klatexformula
     SUBDIR += kludge3d
     SUBDIR += kolourpaint
@@ -443,6 +441,7 @@
     SUBDIR += libgfx
     SUBDIR += libgltext
     SUBDIR += libgltf
+    SUBDIR += libglvnd
     SUBDIR += libgnomecanvas
     SUBDIR += libgnomecanvas-reference
     SUBDIR += libgnomecanvasmm26
@@ -530,16 +529,15 @@
     SUBDIR += megapov
     SUBDIR += meh
     SUBDIR += mesa-demos
+    SUBDIR += mesa-devel
     SUBDIR += mesa-dri
     SUBDIR += mesa-libs
     SUBDIR += metacam
     SUBDIR += metapixel
-    SUBDIR += mhgui
     SUBDIR += milton
     SUBDIR += minder
     SUBDIR += ming
     SUBDIR += mirtk
-    SUBDIR += mmrecover
     SUBDIR += movit
     SUBDIR += mozjpeg
     SUBDIR += mscgen
@@ -794,6 +792,7 @@
     SUBDIR += py-cairocffi
     SUBDIR += py-cairosvg
     SUBDIR += py-cartopy
+    SUBDIR += py-cogdumper
     SUBDIR += py-colour
     SUBDIR += py-descartes
     SUBDIR += py-django-easy-thumbnails
@@ -866,7 +865,9 @@
     SUBDIR += py-python-poppler-qt5
     SUBDIR += py-pyvips
     SUBDIR += py-pyx
+    SUBDIR += py-qrencode
     SUBDIR += py-qt5-svg
+    SUBDIR += py-rasterio
     SUBDIR += py-rawkit
     SUBDIR += py-sane
     SUBDIR += py-scikit-image
@@ -887,6 +888,7 @@
     SUBDIR += py-yaswfp
     SUBDIR += pymorph
     SUBDIR += qcomicbook
+    SUBDIR += qcustomplot-qt5
     SUBDIR += qgis
     SUBDIR += qgis-ltr
     SUBDIR += qiv
@@ -1025,6 +1027,7 @@
     SUBDIR += tinyows
     SUBDIR += tkpng
     SUBDIR += togl
+    SUBDIR += tslib
     SUBDIR += ttygif
     SUBDIR += ttyplot
     SUBDIR += tumble
@@ -1042,6 +1045,7 @@
     SUBDIR += vigra
     SUBDIR += vips
     SUBDIR += visprint
+    SUBDIR += viu
     SUBDIR += vkd3d
     SUBDIR += volpack
     SUBDIR += vp
