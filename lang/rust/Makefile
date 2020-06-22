@@ -2,8 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	rust
-PORTVERSION?=	1.44.0
-PORTREVISION?=	0
+PORTVERSION?=	1.44.1
+PORTREVISION?=	1
 CATEGORIES=	lang
 MASTER_SITES=	https://static.rust-lang.org/dist/:src \
 		LOCAL/tobik/rust:bootstrap \
@@ -29,6 +29,9 @@ ONLY_FOR_ARCHS_REASON?=	requires prebuilt bootstrap compiler
 
 BUILD_DEPENDS=	cmake:devel/cmake \
 		libgit2>=1.0.0:devel/libgit2
+.if defined(NIGHTLY_DATE)
+BUILD_DEPENDS+=	ninja:devel/ninja
+.endif
 LIB_DEPENDS=	libcurl.so:ftp/curl \
 		libgit2.so:devel/libgit2 \
 		libssh2.so:security/libssh2
@@ -84,7 +87,7 @@ _CARGO_BOOTSTRAP=	${BOOTSTRAPS_DATE_${ARCH}:U${BOOTSTRAPS_DATE}}/cargo-${CARGO_B
 EXTRA_PATCHES+=	${PATCHDIR}/${ARCH}${BOOTSTRAPS_SUFFIX}
 .endif
 
-.if ${ARCH} == powerpc64
+.if defined(PPC_ABI) && ${PPC_ABI} == ELFv1
 # The bootstrap is hardcoded to use gcc9
 # but we can build with a newer or older compiler as provided by USE_GCC=yes
 BUILD_DEPENDS+=	gcc9:lang/gcc9
@@ -147,15 +150,14 @@ do-configure:
 	@${ECHO_CMD} 'default-linker="${CC}"' >> ${WRKSRC}/config.toml
 	@${ECHO_CMD} 'verbose-tests=true' >> ${WRKSRC}/config.toml
 	@${ECHO_CMD} 'lld=${_RUST_BUILD_WASM}' >> ${WRKSRC}/config.toml
-.if ${ARCH} == powerpc64
-# XXX: crashes without this?
-	@${ECHO_CMD} 'debuginfo-level-std=1' >> ${WRKSRC}/config.toml
-.endif
 	@${ECHO_CMD} '[llvm]' >> ${WRKSRC}/config.toml
 .if defined(WITH_CCACHE_BUILD) && !defined(NO_CCACHE)
 	@${ECHO_CMD} 'ccache="${CCACHE_BIN}"' >> ${WRKSRC}/config.toml
 .else
 	@${ECHO_CMD} 'ccache=false' >> ${WRKSRC}/config.toml
+.endif
+.if defined(NIGHTLY_DATE)
+	@${ECHO_CMD} 'ninja=true' >> ${WRKSRC}/config.toml
 .endif
 .if ${ARCH} == armv6
 # fails to link with base ld.bfd: rustc_codegen_llvm.e2557spx-cgu.11:(.text._ZN89_$LT$rustc_target..abi..call..CastTarget$u20$as$u20$rustc_codegen_llvm..abi..LlvmType$GT$9llvm_type17h1296210ab461fc57E+0x54): relocation truncated to fit: R_ARM_CALL against symbol `__aeabi_uldivmod' defined in .text.__aeabi_uldivmod section in /tmp/rustcdnGbao/libcompiler_builtins-ee65b414e4115a8f.rlib(compiler_builtins-ee65b414e4115a8f.compiler_builtins.ay8p39ey-cgu.13.rcgu.o)
@@ -175,6 +177,10 @@ do-configure:
 .endfor
 	@${ECHO_CMD} '[dist]' >> ${WRKSRC}/config.toml
 	@${ECHO_CMD} 'src-tarball=false' >> ${WRKSRC}/config.toml
+.if defined(NIGHTLY_DATE)
+# Don't abort if optional tools fail to build
+	@${ECHO_CMD} 'missing-tools=true' >> ${WRKSRC}/config.toml
+.endif
 	@${REINPLACE_CMD} 's,%CC%,${CC},g' \
 		${WRKSRC}/src/librustc_llvm/build.rs \
 		${WRKSRC}/src/bootstrap/native.rs

@@ -21,6 +21,7 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	texane
 
 USES=		cmake pkgconfig
+USE_CSTD=	c99
 USE_LDCONFIG=	yes
 
 PORTDOCS=	README.md ${ALLDOCS}
@@ -30,10 +31,6 @@ ALLDOCS=	compiling.md developer.txt devices_boards.md \
 		version_support.md
 
 .include <bsd.port.pre.mk>
-
-.if ! ${ARCH:M*64*}
-EXTRA_PATCHES+=	${FILESDIR}/extra-pacth-32bit
-.endif
 
 post-install:
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
