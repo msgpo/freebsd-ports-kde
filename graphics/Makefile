@@ -149,6 +149,7 @@
     SUBDIR += egl-wayland
     SUBDIR += eglexternalplatform
     SUBDIR += electricsheep
+    SUBDIR += elementary-photos
     SUBDIR += embree
     SUBDIR += enblend
     SUBDIR += engauge-digitizer
@@ -908,6 +909,7 @@
     SUBDIR += quat-gui
     SUBDIR += quesa
     SUBDIR += quesoglc
+    SUBDIR += qvge
     SUBDIR += radiance
     SUBDIR += radius-engine
     SUBDIR += rapid-photo-downloader
