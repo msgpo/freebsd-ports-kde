@@ -537,6 +537,7 @@
     SUBDIR += p5-Hash-Merge
     SUBDIR += p5-Hatena-Keyword
     SUBDIR += p5-IO-CSVHeaderFile
+    SUBDIR += p5-JSON-Validator
     SUBDIR += p5-JavaScript-Minifier
     SUBDIR += p5-JavaScript-Minifier-XS
     SUBDIR += p5-JavaScript-Packer
@@ -1526,7 +1527,6 @@
     SUBDIR += rubygem-ferret
     SUBDIR += rubygem-fog-xml
     SUBDIR += rubygem-gemoji
-    SUBDIR += rubygem-gherkin
     SUBDIR += rubygem-github-linguist
     SUBDIR += rubygem-github-markup
     SUBDIR += rubygem-github-markup17
